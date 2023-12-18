@@ -1,0 +1,3 @@
+/Users/beatrizsonnemberg/Desktop/projeto2-AED/cmake-build-debug/CMakeFiles/projeto2_AED.dir
+/Users/beatrizsonnemberg/Desktop/projeto2-AED/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/beatrizsonnemberg/Desktop/projeto2-AED/cmake-build-debug/CMakeFiles/rebuild_cache.dir
