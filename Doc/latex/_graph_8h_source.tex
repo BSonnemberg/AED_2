@@ -1,0 +1,94 @@
+\doxysection{Graph.\+h}
+\hypertarget{_graph_8h_source}{}\label{_graph_8h_source}\index{Projeto2-\/AED/Graph.h@{Projeto2-\/AED/Graph.h}}
+\mbox{\hyperlink{_graph_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PROJETO2\_AED\_GRAPH\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PROJETO2\_AED\_GRAPH\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_airline_8h}{Airline.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_airport_8h}{Airport.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_edge}{Edge}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_graph}{Graph}};}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vertex}{Vertex}};}
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vertex}{Vertex}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_airport}{Airport}}\ info;}
+\DoxyCodeLine{00029\ \ \ \ \ vector<Edge>\ adj;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ visited;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ processing;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ num;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ low;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ distance;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ arrives;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}(\mbox{\hyperlink{class_airport}{Airport}}\ in);}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_airport}{Airport}}\ \mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_vertex_ac08b2cb141d31f656462ef3b986a227e}{getArrives}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_a64819d314a3445db1e341b474fc4eff0}{addArrives}}();}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_ad98f347fdcf0ec1de304434f8f2de864}{setInfo}}(\mbox{\hyperlink{class_airport}{Airport}}\ in);}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_vertex_aa4bd82105b85ee53a917391f4811cd8a}{isVisited}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_a3c6d6c2254850a647d3a27007ef940f6}{setVisited}}(\textcolor{keywordtype}{bool}\ v);}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_vertex_a126e306f0534b99cd97aa864fdb243d4}{isProcessing}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_a4427952db4781f61eb336fe5965da708}{setProcessing}}(\textcolor{keywordtype}{bool}\ p);}
+\DoxyCodeLine{00099\ \ \ \ \ vector<Edge>\ \mbox{\hyperlink{class_vertex_af1a7697464381c433adec7f9b964e807}{getAdj}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_ac17688dd9f2c7387d45d0eefbbb1a99b}{setAdj}}(\textcolor{keyword}{const}\ vector<Edge>\ \&adj);}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_a0f36a867081d155797c1bb30c19dc526}{addEdge}}(\mbox{\hyperlink{class_vertex}{Vertex}}\ *dest,\ \mbox{\hyperlink{class_airline}{Airline}}\ w);}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_vertex_a5c391478f6fc9302bea57ae4daa18c81}{getDistance}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_a020868955e2e501f13bd4f5b6d1d5a23}{setDistance}}(\textcolor{keywordtype}{int}\ d);}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_vertex_a0fb9defc6bc64bd16e51bcf867c511cf}{removeEdgeTo}}(\mbox{\hyperlink{class_vertex}{Vertex}}\ *d);}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_vertex_a16d00e3e19e39566ab142f94289f63ce}{operator==}}(\mbox{\hyperlink{class_vertex}{Vertex}}\ v)\ ;}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_vertex_af65c843649e89097b38e8d108327c34a}{getNum}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_aa691c9e7724f31dc397ba653eb061d34}{setNum}}(\textcolor{keywordtype}{int}\ num);}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_vertex_a7acb7c0857c03cf23db677ad3618a04e}{getLow}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_a390911b126aee6bcf85a4b2e9921a421}{setLow}}(\textcolor{keywordtype}{int}\ low);}
+\DoxyCodeLine{00164\ \};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00170\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_edge}{Edge}}\ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *\ dest;}
+\DoxyCodeLine{00172\ \ \ \ \ \mbox{\hyperlink{class_airline}{Airline}}\ weight;}
+\DoxyCodeLine{00173\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00181\ \ \ \ \ \mbox{\hyperlink{class_edge}{Edge}}(\mbox{\hyperlink{class_vertex}{Vertex}}\ *d,\ \mbox{\hyperlink{class_airline}{Airline}}\ airline);}
+\DoxyCodeLine{00187\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *\mbox{\hyperlink{class_edge_a5cda44e9ba257b03963a1ac301371a59}{getDest}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_a1ecc1e562c2f7f07d6897dd9e54e7cbd}{setDest}}(\mbox{\hyperlink{class_vertex}{Vertex}}\ *dest);}
+\DoxyCodeLine{00199\ \ \ \ \ \mbox{\hyperlink{class_airline}{Airline}}\ \mbox{\hyperlink{class_edge_abaa980628bfa3697b6a76b0d238f2822}{getWeight}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_edge_a19b80f0f45e429cb8aae5db2428720c0}{setWeight}}(\mbox{\hyperlink{class_airline}{Airline}}*\ weight);}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \};}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00214\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_graph}{Graph}}\ \{}
+\DoxyCodeLine{00215\ \ \ \ \ unordered\_map<string,\ Vertex\ *>\ vertexSet;}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graph_a263f9ab7e7ba21a08bee90b2dea372ec}{inDegree}}(\textcolor{keyword}{const}\ std::string\&\ airportCode)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00231\ \ \ \ \ \mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}}();}
+\DoxyCodeLine{00238\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *\mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(\ \mbox{\hyperlink{class_airport}{Airport}}\ \&in)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00245\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *\mbox{\hyperlink{class_graph_af9e8dcdb5d2113d3a9cf1369c1690981}{findVertex}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&airportCode)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graph_abb5e0517e2979c54eebdafc2a9875e8f}{getNumVertex}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_graph_ade709e765bd7999f6140757bb30a902d}{addVertex}}(\mbox{\hyperlink{class_airport}{Airport}}\ in);}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_graph_a4139cbac5e9eae37a9b6416918b3c883}{removeVertex}}(\ \mbox{\hyperlink{class_airport}{Airport}}\ in);}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_graph_a2dd2e9de8481f073d90720dd40bca78c}{addEdge}}(\ \mbox{\hyperlink{class_airport}{Airport}}\ \&sourc,\ \ \mbox{\hyperlink{class_airport}{Airport}}\ \&dest,\ \mbox{\hyperlink{class_airline}{Airline}}\ w);}
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_graph_abb431180bbe7f16ea59747aa0e19f254}{removeEdge}}(\ \mbox{\hyperlink{class_airport}{Airport}}\ \&sourc,\ \mbox{\hyperlink{class_airport}{Airport}}\ \&dest);}
+\DoxyCodeLine{00288\ \ \ \ \ unordered\_map<string,\ Vertex\ *\ >\ \mbox{\hyperlink{class_graph_af7c6157baf3250a0780c7a9a34ffde7c}{getVertexSet}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \};}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJETO2\_AED\_GRAPH\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,230 @@
+\doxysection{Read Class Reference}
+\hypertarget{class_read}{}\label{class_read}\index{Read@{Read}}
+
+
+Class responsible for reading data from the system.  
+
+
+
+
+{\ttfamily \#include $<$Read.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_read_a11f3af06190a01c46d6dc47dda4caa2a}{read\+Airlines}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_read}{Read} airline data from CSV file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_read_a42b01870621b489a1733023311843d56}{read\+Airports}} ()
+\begin{DoxyCompactList}\small\item\em Reads airport data from the CSV file and adds it to the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_read_a58601d805e693618bfac841790a3c651}{read\+Flights}} ()
+\begin{DoxyCompactList}\small\item\em Reads flight data from the CSV file and adds it to the graph. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airport}{Airport}} $>$ \mbox{\hyperlink{class_read_a1ccec6895a0245b321420811a9efb6fa}{get\+Airport\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Gets the map of read airports. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airline}{Airline}} $>$ \mbox{\hyperlink{class_read_abb45e936303c28751a744eed38396afa}{get\+Airline\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Gets the map of read airlines. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_read_aadd61b49b819c849a167e262d1498530}{get\+Flights}} ()
+\begin{DoxyCompactList}\small\item\em Gets the flight graph constructed from the read data. \end{DoxyCompactList}\item 
+set$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ \mbox{\hyperlink{class_read_aa7cf29f5a63b406ec670602b049e6065}{get\+Flight\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Gets the set of flights read. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for reading data from the system. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_read_abb45e936303c28751a744eed38396afa}\label{class_read_abb45e936303c28751a744eed38396afa} 
+\index{Read@{Read}!getAirlineMap@{getAirlineMap}}
+\index{getAirlineMap@{getAirlineMap}!Read@{Read}}
+\doxysubsubsection{\texorpdfstring{getAirlineMap()}{getAirlineMap()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airline}{Airline}} $>$ Read\+::get\+Airline\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the map of read airlines. 
+
+\begin{DoxyReturn}{Returns}
+A map containing information about airlines. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordflow}{return}\ airlineMap;}
+\DoxyCodeLine{00074\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_read_a1ccec6895a0245b321420811a9efb6fa}\label{class_read_a1ccec6895a0245b321420811a9efb6fa} 
+\index{Read@{Read}!getAirportMap@{getAirportMap}}
+\index{getAirportMap@{getAirportMap}!Read@{Read}}
+\doxysubsubsection{\texorpdfstring{getAirportMap()}{getAirportMap()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airport}{Airport}} $>$ Read\+::get\+Airport\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the map of read airports. 
+
+\begin{DoxyReturn}{Returns}
+A map containing information about airports. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{return}\ airportMap;}
+\DoxyCodeLine{00078\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_read_aadd61b49b819c849a167e262d1498530}\label{class_read_aadd61b49b819c849a167e262d1498530} 
+\index{Read@{Read}!getFlights@{getFlights}}
+\index{getFlights@{getFlights}!Read@{Read}}
+\doxysubsubsection{\texorpdfstring{getFlights()}{getFlights()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} Read\+::get\+Flights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the flight graph constructed from the read data. 
+
+\begin{DoxyReturn}{Returns}
+A \doxylink{class_graph}{Graph} object containing the representation of flights. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{return}\ flights;}
+\DoxyCodeLine{00085\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_read_aa7cf29f5a63b406ec670602b049e6065}\label{class_read_aa7cf29f5a63b406ec670602b049e6065} 
+\index{Read@{Read}!getFlightSet@{getFlightSet}}
+\index{getFlightSet@{getFlightSet}!Read@{Read}}
+\doxysubsubsection{\texorpdfstring{getFlightSet()}{getFlightSet()}}
+{\footnotesize\ttfamily set$<$ \mbox{\hyperlink{class_flight}{Flight}} $>$ Read\+::get\+Flight\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the set of flights read. 
+
+\begin{DoxyReturn}{Returns}
+A set containing information about flights. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{return}\ flightSet;}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_read_a11f3af06190a01c46d6dc47dda4caa2a}\label{class_read_a11f3af06190a01c46d6dc47dda4caa2a} 
+\index{Read@{Read}!readAirlines@{readAirlines}}
+\index{readAirlines@{readAirlines}!Read@{Read}}
+\doxysubsubsection{\texorpdfstring{readAirlines()}{readAirlines()}}
+{\footnotesize\ttfamily void Read\+::read\+Airlines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_read}{Read} airline data from CSV file. 
+
+\begin{DoxyNote}{Note}
+Complexity\+: O(\+C), where C is the number of airlines in the file. 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{string}\ Code,Name,Callsign,Country;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{string}\ dir\ =\ \textcolor{stringliteral}{"{}../dataset/airlines.csv"{}},\ line;}
+\DoxyCodeLine{00035\ \ \ \ \ ifstream\ ifile(dir);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{char}\ sep\ =\textcolor{charliteral}{','};}
+\DoxyCodeLine{00037\ \ \ \ \ getline(ifile,line);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(ifile,\ line))\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ stringstream\ \ iss(line);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ getline(iss,Code,sep);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ getline(iss,Name,sep);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ getline(iss,Callsign,sep);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ getline(iss,Country,sep);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_airline}{Airline}}\ airline\ =\ \mbox{\hyperlink{class_airline}{Airline}}(Code,Name,Callsign,Country);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ airlineMap.emplace(Code,airline);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_read_a42b01870621b489a1733023311843d56}\label{class_read_a42b01870621b489a1733023311843d56} 
+\index{Read@{Read}!readAirports@{readAirports}}
+\index{readAirports@{readAirports}!Read@{Read}}
+\doxysubsubsection{\texorpdfstring{readAirports()}{readAirports()}}
+{\footnotesize\ttfamily void Read\+::read\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads airport data from the CSV file and adds it to the graph. 
+
+\begin{DoxyNote}{Note}
+Complexity\+: O(\+V), where V is the number of vertices (airports) in the graph. 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{string}\ Code,Name,City,Country;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{double}\ Latitude,Longitude;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{string}\ dir\ =\ \textcolor{stringliteral}{"{}../dataset/airports.csv"{}},\ line;}
+\DoxyCodeLine{00015\ \ \ \ \ ifstream\ ifile(dir);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{char}\ sep\ =\ \textcolor{charliteral}{','};}
+\DoxyCodeLine{00017\ \ \ \ \ getline(ifile,line);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(ifile,\ line))\{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ stringstream\ iss(line);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ getline(iss,Code,sep);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ getline(iss,Name,sep);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ getline(iss,City,sep);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ getline(iss,\ Country,\ sep);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ iss>>Latitude>>sep;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ iss>>Longitude>>sep;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_airport}{Airport}}\ airport\ =\ \mbox{\hyperlink{class_airport}{Airport}}(Code,Name,City,\ Country,\ Latitude,Longitude);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ airportMap.emplace(Code,airport);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ flights.\mbox{\hyperlink{class_graph_ade709e765bd7999f6140757bb30a902d}{addVertex}}(airport);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_read_a58601d805e693618bfac841790a3c651}\label{class_read_a58601d805e693618bfac841790a3c651} 
+\index{Read@{Read}!readFlights@{readFlights}}
+\index{readFlights@{readFlights}!Read@{Read}}
+\doxysubsubsection{\texorpdfstring{readFlights()}{readFlights()}}
+{\footnotesize\ttfamily void Read\+::read\+Flights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads flight data from the CSV file and adds it to the graph. 
+
+\begin{DoxyNote}{Note}
+Complexity\+: O(\+E), where E is the number of edges (flights) in the graph. 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{string}\ Source,Target,airline;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{string}\ dir\ =\ \textcolor{stringliteral}{"{}../dataset/flights.csv"{}},\ line;}
+\DoxyCodeLine{00055\ \ \ \ \ ifstream\ ifile(dir);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{char}\ sep\ =\ \textcolor{charliteral}{','};}
+\DoxyCodeLine{00057\ \ \ \ \ getline\ (ifile,\ line);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(ifile,\ line))\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ stringstream\ iss(line);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ getline(iss,\ Source,\ sep);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ getline(iss,\ Target,\ sep);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ getline(iss,\ airline,\ sep);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ flightSet.emplace(Source,Target,airline);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ flights.\mbox{\hyperlink{class_graph_a2dd2e9de8481f073d90720dd40bca78c}{addEdge}}(airportMap.at(Source),\ airportMap.at(Target),airlineMap.at(airline)\ );}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_read_8h}{Read.\+h}}\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_read_8cpp}{Read.\+cpp}}\end{DoxyCompactItemize}

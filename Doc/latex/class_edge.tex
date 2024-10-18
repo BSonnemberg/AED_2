@@ -1,0 +1,143 @@
+\doxysection{Edge Class Reference}
+\hypertarget{class_edge}{}\label{class_edge}\index{Edge@{Edge}}
+
+
+Represents an edge in the graph.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_edge_aa33d01b3ffcbcad2f8de67d6c09e6143}{Edge}} (\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}d, \mbox{\hyperlink{class_airline}{Airline}} airline)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_edge}{Edge} class constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_edge_a5cda44e9ba257b03963a1ac301371a59}{get\+Dest}} () const
+\begin{DoxyCompactList}\small\item\em Gets the target vertex of the edge. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_edge_a1ecc1e562c2f7f07d6897dd9e54e7cbd}{set\+Dest}} (\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}dest)
+\begin{DoxyCompactList}\small\item\em Defines the destination vertex of the edge. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_airline}{Airline}} \mbox{\hyperlink{class_edge_abaa980628bfa3697b6a76b0d238f2822}{get\+Weight}} () const
+\begin{DoxyCompactList}\small\item\em Gets the airline associated with the edge. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_edge_a19b80f0f45e429cb8aae5db2428720c0}{set\+Weight}} (\mbox{\hyperlink{class_airline}{Airline}} \texorpdfstring{$\ast$}{*}weight)
+\begin{DoxyCompactList}\small\item\em Defines the airline associated with the edge. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an edge in the graph. 
+
+@class\+Edge 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_edge_aa33d01b3ffcbcad2f8de67d6c09e6143}\label{class_edge_aa33d01b3ffcbcad2f8de67d6c09e6143} 
+\index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}}
+{\footnotesize\ttfamily Edge\+::\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}}]{d,  }\item[{\mbox{\hyperlink{class_airline}{Airline}}}]{airline }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_edge}{Edge} class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & \doxylink{class_edge}{Edge} destination vertex. \\
+\hline
+{\em airline} & \doxylink{class_airline}{Airline} associated with the edge.\\
+\hline
+\end{DoxyParams}
+Initializes an edge with the given destination vertex and airline. @complexity O(1) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00006\ \ \ \ \ this-\/>dest\ =\ d;}
+\DoxyCodeLine{00007\ \ \ \ \ this-\/>weight\ =\ airline;}
+\DoxyCodeLine{00008\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_edge_a5cda44e9ba257b03963a1ac301371a59}\label{class_edge_a5cda44e9ba257b03963a1ac301371a59} 
+\index{Edge@{Edge}!getDest@{getDest}}
+\index{getDest@{getDest}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getDest()}{getDest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} Edge\+::get\+Dest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the target vertex of the edge. 
+
+\begin{DoxyReturn}{Returns}
+The destination vertex of the edge. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{return}\ dest;}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_edge_abaa980628bfa3697b6a76b0d238f2822}\label{class_edge_abaa980628bfa3697b6a76b0d238f2822} 
+\index{Edge@{Edge}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_airline}{Airline}} Edge\+::get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the airline associated with the edge. 
+
+\begin{DoxyReturn}{Returns}
+The airline associated with the edge. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ weight;}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_edge_a1ecc1e562c2f7f07d6897dd9e54e7cbd}\label{class_edge_a1ecc1e562c2f7f07d6897dd9e54e7cbd} 
+\index{Edge@{Edge}!setDest@{setDest}}
+\index{setDest@{setDest}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{setDest()}{setDest()}}
+{\footnotesize\ttfamily void Edge\+::set\+Dest (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}}]{dest }\end{DoxyParamCaption})}
+
+
+
+Defines the destination vertex of the edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & New destination vertex. @complexity O(1) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ Edge::dest\ =\ d;}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_edge_a19b80f0f45e429cb8aae5db2428720c0}\label{class_edge_a19b80f0f45e429cb8aae5db2428720c0} 
+\index{Edge@{Edge}!setWeight@{setWeight}}
+\index{setWeight@{setWeight}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{setWeight()}{setWeight()}}
+{\footnotesize\ttfamily void Edge\+::set\+Weight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_airline}{Airline}} \texorpdfstring{$\ast$}{*}}]{weight }\end{DoxyParamCaption})}
+
+
+
+Defines the airline associated with the edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weight} & New airline associated with the edge. @complexity O(1) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_graph_8h}{Graph.\+h}}\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_graph_8cpp}{Graph.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,38 @@
+\doxysection{Read.\+h}
+\hypertarget{_read_8h_source}{}\label{_read_8h_source}\index{Projeto2-\/AED/Read.h@{Projeto2-\/AED/Read.h}}
+\mbox{\hyperlink{_read_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ PROJETO2\_AED\_READ\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ PROJETO2\_AED\_READ\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_airport_8h}{Airport.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_graph_8h}{Graph.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_flight_8h}{Flight.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_read}{Read}}\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\ flights;\ }
+\DoxyCodeLine{00023\ \ \ \ \ unordered\_map<string,\ Airport>\ airportMap;\ }
+\DoxyCodeLine{00024\ \ \ \ \ unordered\_map<string,\ Airline>\ airlineMap;\ }
+\DoxyCodeLine{00025\ \ \ \ \ set<Flight>\ flightSet;\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_read_a11f3af06190a01c46d6dc47dda4caa2a}{readAirlines}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_read_a42b01870621b489a1733023311843d56}{readAirports}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_read_a58601d805e693618bfac841790a3c651}{readFlights}}();}
+\DoxyCodeLine{00047\ \ \ \ \ unordered\_map<string,Airport>\ \mbox{\hyperlink{class_read_a1ccec6895a0245b321420811a9efb6fa}{getAirportMap}}();}
+\DoxyCodeLine{00053\ \ \ \ \ unordered\_map<string,\ Airline>\ \mbox{\hyperlink{class_read_abb45e936303c28751a744eed38396afa}{getAirlineMap}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\ \mbox{\hyperlink{class_read_aadd61b49b819c849a167e262d1498530}{getFlights}}();}
+\DoxyCodeLine{00064\ \ \ \ \ set<Flight>\ \mbox{\hyperlink{class_read_aa7cf29f5a63b406ec670602b049e6065}{getFlightSet}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJETO2\_AED\_READ\_H}}
+
+\end{DoxyCode}

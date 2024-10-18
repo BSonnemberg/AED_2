@@ -1,0 +1,159 @@
+\doxysection{Airline Class Reference}
+\hypertarget{class_airline}{}\label{class_airline}\index{Airline@{Airline}}
+
+
+Represents an airline.  
+
+
+
+
+{\ttfamily \#include $<$Airline.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_airline_ab6ca9dcf88120df1e835650ca6aa7cbd}{Airline}} (string code, string name, string callsign, string country)
+\begin{DoxyCompactList}\small\item\em Constructor of the \doxylink{class_airline}{Airline} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_airline_a2e6766b5e3a4e3106062c710740a2a32}{Airline}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_airline}{Airline} class standard constructor. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_airline_ac176cc0b3559361eab3d77db55334461}{get\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Gets the airline code. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_airline_a48acf049e4030ac59816e86ee6a7b4aa}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the airline. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_airline_aa2fbdf61b5dc431552fcea751cb3d101}{get\+Country}} ()
+\begin{DoxyCompactList}\small\item\em Gets the country of the airline. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_airline_a5df1ca83c934fa6444674302c1d84533}{get\+Callsign}} ()
+\begin{DoxyCompactList}\small\item\em Gets the airline\textquotesingle{}s callsign. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an airline. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_airline_ab6ca9dcf88120df1e835650ca6aa7cbd}\label{class_airline_ab6ca9dcf88120df1e835650ca6aa7cbd} 
+\index{Airline@{Airline}!Airline@{Airline}}
+\index{Airline@{Airline}!Airline@{Airline}}
+\doxysubsubsection{\texorpdfstring{Airline()}{Airline()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Airline\+::\+Airline (\begin{DoxyParamCaption}\item[{string}]{code,  }\item[{string}]{name,  }\item[{string}]{callsign,  }\item[{string}]{country }\end{DoxyParamCaption})}
+
+
+
+Constructor of the \doxylink{class_airline}{Airline} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & \doxylink{class_airline}{Airline} code. \\
+\hline
+{\em name} & \doxylink{class_airline}{Airline} name. \\
+\hline
+{\em callsign} & \doxylink{class_airline}{Airline} callsign. \\
+\hline
+{\em country} & \doxylink{class_airline}{Airline} country.\\
+\hline
+\end{DoxyParams}
+This constructor initializes the class members with the given values. @complexity O(1) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00005\ \ \ \ \ this-\/>code=code;}
+\DoxyCodeLine{00006\ \ \ \ \ this-\/>name=name;}
+\DoxyCodeLine{00007\ \ \ \ \ this-\/>country=country;}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>callsign=callsign;}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_airline_a2e6766b5e3a4e3106062c710740a2a32}\label{class_airline_a2e6766b5e3a4e3106062c710740a2a32} 
+\index{Airline@{Airline}!Airline@{Airline}}
+\index{Airline@{Airline}!Airline@{Airline}}
+\doxysubsubsection{\texorpdfstring{Airline()}{Airline()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Airline\+::\+Airline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_airline}{Airline} class standard constructor. 
+
+This default constructor is required for creating parameterless \doxylink{class_airline}{Airline} objects. @complexity O(1) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_airline_a5df1ca83c934fa6444674302c1d84533}\label{class_airline_a5df1ca83c934fa6444674302c1d84533} 
+\index{Airline@{Airline}!getCallsign@{getCallsign}}
+\index{getCallsign@{getCallsign}!Airline@{Airline}}
+\doxysubsubsection{\texorpdfstring{getCallsign()}{getCallsign()}}
+{\footnotesize\ttfamily string Airline\+::get\+Callsign (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the airline\textquotesingle{}s callsign. 
+
+\begin{DoxyReturn}{Returns}
+The airline\textquotesingle{}s callsign. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{\textcolor{keywordflow}{return}\ callsign;\}}
+
+\end{DoxyCode}
+\Hypertarget{class_airline_ac176cc0b3559361eab3d77db55334461}\label{class_airline_ac176cc0b3559361eab3d77db55334461} 
+\index{Airline@{Airline}!getCode@{getCode}}
+\index{getCode@{getCode}!Airline@{Airline}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily string Airline\+::get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the airline code. 
+
+\begin{DoxyReturn}{Returns}
+The airline code. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \{\textcolor{keywordflow}{return}\ code;\}}
+
+\end{DoxyCode}
+\Hypertarget{class_airline_aa2fbdf61b5dc431552fcea751cb3d101}\label{class_airline_aa2fbdf61b5dc431552fcea751cb3d101} 
+\index{Airline@{Airline}!getCountry@{getCountry}}
+\index{getCountry@{getCountry}!Airline@{Airline}}
+\doxysubsubsection{\texorpdfstring{getCountry()}{getCountry()}}
+{\footnotesize\ttfamily string Airline\+::get\+Country (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the country of the airline. 
+
+\begin{DoxyReturn}{Returns}
+The country of the airline. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \{\textcolor{keywordflow}{return}\ country;\}}
+
+\end{DoxyCode}
+\Hypertarget{class_airline_a48acf049e4030ac59816e86ee6a7b4aa}\label{class_airline_a48acf049e4030ac59816e86ee6a7b4aa} 
+\index{Airline@{Airline}!getName@{getName}}
+\index{getName@{getName}!Airline@{Airline}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Airline\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the name of the airline. 
+
+\begin{DoxyReturn}{Returns}
+The name of the airline. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{\textcolor{keywordflow}{return}\ name;\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_airline_8h}{Airline.\+h}}\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_airline_8cpp}{Airline.\+cpp}}\end{DoxyCompactItemize}

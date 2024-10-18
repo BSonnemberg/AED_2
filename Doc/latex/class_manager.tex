@@ -1,0 +1,837 @@
+\doxysection{Manager Class Reference}
+\hypertarget{class_manager}{}\label{class_manager}\index{Manager@{Manager}}
+
+
+Declaration of the \doxylink{class_manager}{Manager} class responsible for managing operations in the flight graph.  
+
+
+
+
+{\ttfamily \#include $<$Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_manager_aba7c73517883e7644950c55e2808a492}{Manager}} (\mbox{\hyperlink{class_graph}{Graph}} \&graph)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_manager}{Manager} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_ad32b7c199c2f090dcad17c60957929ca}{get\+Global\+Num\+Airports}} () const
+\begin{DoxyCompactList}\small\item\em Gets the global number of airports and the global number of available flights. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_a725cf2764c5f8ba032a2bf435055c86f}{get\+Global\+Num\+Cities}} () const
+\begin{DoxyCompactList}\small\item\em Gets the global number of distinct airport cities. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_a0f54ffd83aebf6ee3018a8c413dbf3ae}{get\+Num\+Available\+Flights}} () const
+\begin{DoxyCompactList}\small\item\em Gets the total number of available flights. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_a212742aa7ff6ca6a4110436e07720c48}{get\+Global\+Num\+Countries}} () const
+\begin{DoxyCompactList}\small\item\em Gets the global number of different countries in airports. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_ac446bf4f5f39362127fabe2c86d1829b}{get\+Global\+Num\+Airlines}} () const
+\begin{DoxyCompactList}\small\item\em Get the global number of specific airlines at airports. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_a86f81694b86c8fe0b6c5444aa584e7ad}{get\+Num\+Flights\+From\+Airport}} (const string \&airport\+Code)
+\begin{DoxyCompactList}\small\item\em Gets the number of flights leaving an airport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_af446b8eeac284081f808638d8b43c3ed}{get\+Num\+Airlines\+From\+Airport}} (const string \&airport\+Code)
+\begin{DoxyCompactList}\small\item\em Gets the number of different airlines leaving an airport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_a14bd3a105e5f52fc4839429dc8a34de0}{get\+Num\+Flights\+Per\+City}} (const std\+::string \&city\+Name, string \&country)
+\begin{DoxyCompactList}\small\item\em Calculates the number of flights departing from a specific city in a given country. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_a35c0cecc633e38f6f7d12b81fca85b3c}{get\+Num\+Flights\+Per\+Airline}} (const std\+::string \&airline\+Code)
+\begin{DoxyCompactList}\small\item\em Gets the number of flights for a specific airline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_ad57ccdc6cecc9d271801935ad0523244}{get\+Num\+Dest\+Countries\+Per\+City}} (const string \&city\+Name, string \&country)
+\begin{DoxyCompactList}\small\item\em Retrieves the number of different countries flown to from a specific city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_ac2598b488c4ab60c7a95314ef7d8220a}{get\+Num\+Dest\+Countries\+Per\+Airport}} (const std\+::string \&airport\+Code)
+\begin{DoxyCompactList}\small\item\em Gets the number of different countries flown to from an airport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_aae78c8a0b0da17366716ac88960cda02}{get\+Top\+KAirports}} (int k) const
+\begin{DoxyCompactList}\small\item\em Gets the main airports based on arrivals and departures criteria. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_a30642c9054e37a989c49dd663c7d3747}{get\+Count\+Reachable\+Destinations}} (const std\+::string \&airport\+Code, int max\+Stops) const
+\begin{DoxyCompactList}\small\item\em Gets the total number of destinations reachable from an airport with a maximum number of layovers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_af0da74e99d497e07d446027fde26c090}{get\+Num\+Destinations}} (const string \&airport\+Code)
+\begin{DoxyCompactList}\small\item\em Gets the total number of destinations (airports, cities or countries) reachable from an airport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_a4c01536e89eeb5749191171f225f2f9c}{get\+Identify\+Essential\+Airports}} () const
+\begin{DoxyCompactList}\small\item\em Identifies airports essential to the network\textquotesingle{}s circulation capacity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_ada51715932df5d8fe7659a2b78f79bb6}{get\+Max\+Trip}} ()
+\begin{DoxyCompactList}\small\item\em Gets the corresponding pair(s) with the maximum distance between airports. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_a24dc70317039814b00cfa610713cd797}{get\+Num\+Destinations\+Per\+Airline}} (const std\+::string \&airline\+Code)
+\begin{DoxyCompactList}\small\item\em Gets the number of destinations for a specific airline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manager_ac49e1e637bd2384d3095d99c8a1c5720}{find\+Best\+Flight\+Option}} (const std\+::string \&source, const std\+::string \&destination, const std\+::vector$<$ std\+::string $>$ \&preferred\+Airlines)
+\begin{DoxyCompactList}\small\item\em Finds the best flight option with or without airlines preferences. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of the \doxylink{class_manager}{Manager} class responsible for managing operations in the flight graph. 
+
+@file\+Manager.h
+
+Class responsible for managing operations in the flight graph. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_manager_aba7c73517883e7644950c55e2808a492}\label{class_manager_aba7c73517883e7644950c55e2808a492} 
+\index{Manager@{Manager}!Manager@{Manager}}
+\index{Manager@{Manager}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{Manager()}{Manager()}}
+{\footnotesize\ttfamily Manager\+::\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graph}{Graph}} \&}]{graph }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_manager}{Manager} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & \doxylink{class_graph}{Graph} of flights to be managed. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ :\ flights\_graph(graph)\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_manager_ac49e1e637bd2384d3095d99c8a1c5720}\label{class_manager_ac49e1e637bd2384d3095d99c8a1c5720} 
+\index{Manager@{Manager}!findBestFlightOption@{findBestFlightOption}}
+\index{findBestFlightOption@{findBestFlightOption}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{findBestFlightOption()}{findBestFlightOption()}}
+{\footnotesize\ttfamily void Manager\+::find\+Best\+Flight\+Option (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source,  }\item[{const std\+::string \&}]{destination,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{preferred\+Airlines }\end{DoxyParamCaption})}
+
+
+
+Finds the best flight option with or without airlines preferences. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Departure airport. \\
+\hline
+{\em destination} & Destination airport. \\
+\hline
+{\em preferred\+Airlines} & Vector of preferred airline codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexity\+: O(V \texorpdfstring{$\ast$}{*} (V + E)), where V is the number of vertices (airports) and E is the number of edges (flights) in the graph. 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00503\ }
+\DoxyCodeLine{00504\ \ \ \ \ std::vector<Vertex*>\ sourceAirports\ =\ findVertexByInput(source);}
+\DoxyCodeLine{00505\ \ \ \ \ vector<Vertex*>\ destAirports\ =\ findVertexByInput(destination);}
+\DoxyCodeLine{00506\ }
+\DoxyCodeLine{00507\ \ \ \ \ \textcolor{keywordflow}{if}(sourceAirports.empty()\ ||\ destAirports.empty())\{}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ Inputs!"{}};}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00510\ \ \ \ \ \}}
+\DoxyCodeLine{00511\ }
+\DoxyCodeLine{00512\ \ \ \ \ std::vector<std::pair<int,\ std::string>>\ flightOptions;}
+\DoxyCodeLine{00513\ \ \ \ \ \textcolor{keywordtype}{int}\ minStops\ =\ INT\_MAX;}
+\DoxyCodeLine{00514\ }
+\DoxyCodeLine{00515\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_vertex}{Vertex}}\ *sourceVertex\ :\ sourceAirports)\ \{}
+\DoxyCodeLine{00516\ }
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&vertexPair\ :\ flights\_graph.getVertexSet())\ \{}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *vertex\ =\ vertexPair.second;}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \ \ \ \ vertex-\/>\mbox{\hyperlink{class_vertex_a3c6d6c2254850a647d3a27007ef940f6}{setVisited}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00521\ }
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ std::queue<std::tuple<Vertex*,\ int,\ std::string>>\ bfsQueue;}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ bfsQueue.push(\{sourceVertex,\ 0,\ sourceVertex-\/>getInfo().getCode()\});}
+\DoxyCodeLine{00524\ }
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!bfsQueue.empty())\ \{}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ [currentVertex,\ stops,\ path]\ =\ bfsQueue.front();}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \ \ \ \ bfsQueue.pop();}
+\DoxyCodeLine{00528\ }
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ destinationVertex:\ destAirports)\ \{}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentVertex-\/>getInfo()\ ==\ destinationVertex-\/>getInfo())\ \{}
+\DoxyCodeLine{00531\ }
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (stops\ <\ minStops)\ \{}
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minStops\ =\ stops;}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ flightOptions.clear();}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (stops\ ==\ minStops)\ \{}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ flightOptions.push\_back(\{stops,\ path\});}
+\DoxyCodeLine{00538\ }
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00543\ }
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_edge}{Edge}}\ \&edge\ :\ currentVertex-\/>getAdj())\ \{}
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *neighbor\ =\ edge.getDest();}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!neighbor-\/>\mbox{\hyperlink{class_vertex_aa4bd82105b85ee53a917391f4811cd8a}{isVisited}}()\ \&\&\ (preferredAirlines.empty()\ ||\ std::find(preferredAirlines.begin(),\ preferredAirlines.end(),\ edge.getWeight().getCode())\ !=\ preferredAirlines.end()))\ \{}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ neighbor-\/>\mbox{\hyperlink{class_vertex_a3c6d6c2254850a647d3a27007ef940f6}{setVisited}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bfsQueue.push(\{neighbor,\ stops\ +\ 1,\ path\ +\ \textcolor{stringliteral}{"{}-\/>"{}}\ +\ neighbor-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().getCode()\});}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00552\ \ \ \ \ \}}
+\DoxyCodeLine{00553\ }
+\DoxyCodeLine{00554\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Flight\ from\ "{}}\ <<\ sourceAirports.front()-\/>getInfo().getCity()\ <<\ \textcolor{stringliteral}{"{}\ to\ "{}}\ <<\ destAirports.front()-\/>getInfo().getCity()\ <<\ std::endl;}
+\DoxyCodeLine{00555\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{00556\ \ \ \ \ \textcolor{keywordflow}{if}\ (flightOptions.empty())\ cerr\ <<\ \textcolor{stringliteral}{"{}No\ flights\ available!"{}};}
+\DoxyCodeLine{00557\ }
+\DoxyCodeLine{00558\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&flightOption\ :\ flightOptions)\ \{}
+\DoxyCodeLine{00559\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ stops\ =\ flightOption.first;}
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ std::string\ path\ =\ flightOption.second;}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Stops:\ "{}}\ <<\ stops-\/1\ <<\ \textcolor{stringliteral}{"{}\ |\ Path:\ "{}}\ <<\ path\ <<\ std::endl;}
+\DoxyCodeLine{00562\ \ \ \ \ \}}
+\DoxyCodeLine{00563\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_a30642c9054e37a989c49dd663c7d3747}\label{class_manager_a30642c9054e37a989c49dd663c7d3747} 
+\index{Manager@{Manager}!getCountReachableDestinations@{getCountReachableDestinations}}
+\index{getCountReachableDestinations@{getCountReachableDestinations}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getCountReachableDestinations()}{getCountReachableDestinations()}}
+{\footnotesize\ttfamily void Manager\+::get\+Count\+Reachable\+Destinations (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{airport\+Code,  }\item[{int}]{max\+Stops }\end{DoxyParamCaption}) const}
+
+
+
+Gets the total number of destinations reachable from an airport with a maximum number of layovers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & The airport code. \\
+\hline
+{\em max\+Stops} & The maximum number of stops allowed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexity\+: O(V+E), where V is the number of vertices (airports) and E is the number of edges (flights). 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}*\ startVertex\ =\ flights\_graph.\mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(airportCode);}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordflow}{if}(startVertex\ ==\ \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Airport\ not\ found!"{}};}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00225\ \ \ \ \ \}}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordtype}{int}\ airports\ =\ 0;}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&pair\ :\ flights\_graph.getVertexSet())\{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ pair.second-\/>\mbox{\hyperlink{class_vertex_a3c6d6c2254850a647d3a27007ef940f6}{setVisited}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{00229\ \ \ \ \ \}}
+\DoxyCodeLine{00230\ \ \ \ \ set<string>\ countries;}
+\DoxyCodeLine{00231\ \ \ \ \ set<pair<string,\ string>>\ citiesAndCountries;}
+\DoxyCodeLine{00232\ \ \ \ \ queue<pair<Vertex*,int>>\ bfs;}
+\DoxyCodeLine{00233\ \ \ \ \ bfs.emplace(startVertex,\ 0);}
+\DoxyCodeLine{00234\ \ \ \ \ startVertex-\/>\mbox{\hyperlink{class_vertex_a3c6d6c2254850a647d3a27007ef940f6}{setVisited}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordflow}{while}\ (!bfs.empty())\{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}[curVertex,\ dist]\ =\ bfs.front();}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ bfs.pop();}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dist\ >=\ maxStops)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&k\ :\ curVertex-\/>getAdj())\{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *\ neighbor\ =\ k.getDest();}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!neighbor-\/>\mbox{\hyperlink{class_vertex_aa4bd82105b85ee53a917391f4811cd8a}{isVisited}}())\{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ airports++;}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pair<string,\ string>\ cityAndCountry\ =\ make\_pair(neighbor-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_a7dc058132336ea1b211323730fc44148}{getCity}}(),\ neighbor-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_a82e555b62c9af6c729a6d3c7fb8ae8c4}{getCountry}}());}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ citiesAndCountries.insert(cityAndCountry);}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countries.insert(neighbor-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_a82e555b62c9af6c729a6d3c7fb8ae8c4}{getCountry}}());}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bfs.emplace(neighbor,\ dist\ +\ 1);}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ neighbor-\/>\mbox{\hyperlink{class_vertex_a3c6d6c2254850a647d3a27007ef940f6}{setVisited}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00253\ \ \ \ \ \}}
+\DoxyCodeLine{00254\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}From\ "{}}\ <<\ airportCode\ <<\ \textcolor{stringliteral}{"{}\ airport\ "{}}\ <<\ \textcolor{stringliteral}{"{}there\ are:\ "{}}\ <<\ airports\ <<\ \textcolor{stringliteral}{"{}\ airports,\ "{}}\ <<\ citiesAndCountries.size()\ <<\ \textcolor{stringliteral}{"{}\ cities\ and\ "{}}\ <<\ countries.size()\ <<\ \textcolor{stringliteral}{"{}\ countries\ reachable.\ "{}}\ <<\ \textcolor{stringliteral}{"{}With\ up\ to\ "{}}\ <<\ maxStops\ <<\ \textcolor{stringliteral}{"{}\ stops."{}};}
+\DoxyCodeLine{00255\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_ac446bf4f5f39362127fabe2c86d1829b}\label{class_manager_ac446bf4f5f39362127fabe2c86d1829b} 
+\index{Manager@{Manager}!getGlobalNumAirlines@{getGlobalNumAirlines}}
+\index{getGlobalNumAirlines@{getGlobalNumAirlines}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getGlobalNumAirlines()}{getGlobalNumAirlines()}}
+{\footnotesize\ttfamily void Manager\+::get\+Global\+Num\+Airlines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the global number of specific airlines at airports. 
+
+\begin{DoxyNote}{Note}
+Complexity\+: O(V⋅\+E⋅logK), where V is the number of vertices (airports) and E is the number of edges (flights). 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ std::set<std::string>\ uniqueAirlines;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&vertexPair\ :\ flights\_graph.getVertexSet())\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *vertex\ =\ vertexPair.second;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_edge}{Edge}}\ \&edge\ :\ vertex-\/>getAdj())\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ uniqueAirlines.insert(edge.getWeight().getCode());}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Global\ number\ of\ airlines:\ "{}}\ <<\ uniqueAirlines.size()\ <<\ std::endl;}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_ad32b7c199c2f090dcad17c60957929ca}\label{class_manager_ad32b7c199c2f090dcad17c60957929ca} 
+\index{Manager@{Manager}!getGlobalNumAirports@{getGlobalNumAirports}}
+\index{getGlobalNumAirports@{getGlobalNumAirports}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getGlobalNumAirports()}{getGlobalNumAirports()}}
+{\footnotesize\ttfamily void Manager\+::get\+Global\+Num\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the global number of airports and the global number of available flights. 
+
+\begin{DoxyNote}{Note}
+Complexity\+: O(1) 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ numAirports=flights\_graph.\mbox{\hyperlink{class_graph_abb5e0517e2979c54eebdafc2a9875e8f}{getNumVertex}}();}
+\DoxyCodeLine{00017\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Global\ number\ of\ airports:\ "{}}\ <<\ numAirports\ <<\ std::endl;}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_a725cf2764c5f8ba032a2bf435055c86f}\label{class_manager_a725cf2764c5f8ba032a2bf435055c86f} 
+\index{Manager@{Manager}!getGlobalNumCities@{getGlobalNumCities}}
+\index{getGlobalNumCities@{getGlobalNumCities}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getGlobalNumCities()}{getGlobalNumCities()}}
+{\footnotesize\ttfamily void Manager\+::get\+Global\+Num\+Cities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the global number of distinct airport cities. 
+
+\begin{DoxyNote}{Note}
+Complexity\+: O(V⋅logK), where V is the number of vertices (airports). 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ std::set<std::pair<std::string,\ std::string>>\ uniqueCityCountry;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&vertexPair\ :\ flights\_graph.getVertexSet())\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *vertex\ =\ vertexPair.second;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ uniqueCityCountry.insert(\{vertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().getCity(),\ vertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_a82e555b62c9af6c729a6d3c7fb8ae8c4}{getCountry}}()\});}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Global\ number\ of\ cities:\ "{}}\ <<\ uniqueCityCountry.size()\ <<\ std::endl;}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_a212742aa7ff6ca6a4110436e07720c48}\label{class_manager_a212742aa7ff6ca6a4110436e07720c48} 
+\index{Manager@{Manager}!getGlobalNumCountries@{getGlobalNumCountries}}
+\index{getGlobalNumCountries@{getGlobalNumCountries}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getGlobalNumCountries()}{getGlobalNumCountries()}}
+{\footnotesize\ttfamily void Manager\+::get\+Global\+Num\+Countries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the global number of different countries in airports. 
+
+\begin{DoxyNote}{Note}
+Complexity\+: O(V⋅logK), where V is the number of vertices (airports). 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ std::set<std::string>\ uniqueCountries;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&vertexPair\ :\ flights\_graph.getVertexSet())\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vertex}{Vertex}}\ *vertex\ =\ vertexPair.second;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ uniqueCountries.insert(vertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_a82e555b62c9af6c729a6d3c7fb8ae8c4}{getCountry}}());}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Global\ number\ of\ countries:\ "{}}\ <<\ uniqueCountries.size()\ <<\ std::endl;}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_a4c01536e89eeb5749191171f225f2f9c}\label{class_manager_a4c01536e89eeb5749191171f225f2f9c} 
+\index{Manager@{Manager}!getIdentifyEssentialAirports@{getIdentifyEssentialAirports}}
+\index{getIdentifyEssentialAirports@{getIdentifyEssentialAirports}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getIdentifyEssentialAirports()}{getIdentifyEssentialAirports()}}
+{\footnotesize\ttfamily void Manager\+::get\+Identify\+Essential\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Identifies airports essential to the network\textquotesingle{}s circulation capacity. 
+
+\begin{DoxyNote}{Note}
+Complexity\+: O(V + E), where V is the number of vertices (airports) and E is the number of edges (flights) in the graph. 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00376\ \ \ \ \ unordered\_set<string>\ res;}
+\DoxyCodeLine{00377\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\ undirectedGraph;}
+\DoxyCodeLine{00378\ }
+\DoxyCodeLine{00379\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ v\ :\ flights\_graph.getVertexSet())\ \{}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ undirectedGraph.\mbox{\hyperlink{class_graph_ade709e765bd7999f6140757bb30a902d}{addVertex}}(v.second-\/>getInfo());}
+\DoxyCodeLine{00381\ \ \ \ \ \}}
+\DoxyCodeLine{00382\ }
+\DoxyCodeLine{00383\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ v\ :\ flights\_graph.getVertexSet())\ \{}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ edge\ :\ v.second-\/>getAdj())\ \{}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_airport}{Airport}}\ a\ =\ v.second-\/>getInfo();}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_airport}{Airport}}\ b\ =\ edge.getDest()-\/>getInfo();}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ undirectedGraph.\mbox{\hyperlink{class_graph_a2dd2e9de8481f073d90720dd40bca78c}{addEdge}}(a,\ b,\ edge.getWeight());}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ undirectedGraph.\mbox{\hyperlink{class_graph_a2dd2e9de8481f073d90720dd40bca78c}{addEdge}}(b,\ a,\ edge.getWeight());}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00390\ \ \ \ \ \}}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00392\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ v\ :\ undirectedGraph.getVertexSet())\ \{}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ v.second-\/>setVisited(\textcolor{keyword}{false});}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ v.second-\/>setNum(-\/1);}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ v.second-\/>setLow(-\/1);}
+\DoxyCodeLine{00396\ \ \ \ \ \}}
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00398\ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ 0;}
+\DoxyCodeLine{00399\ \ \ \ \ stack<string>\ s;}
+\DoxyCodeLine{00400\ }
+\DoxyCodeLine{00401\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ vtx\ :\ undirectedGraph.getVertexSet())\ \{}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!vtx.second-\/>isVisited())\ \{}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ dfs\_art(undirectedGraph,\ vtx.second,\ s,\ res,\ index);}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00405\ \ \ \ \ \}}
+\DoxyCodeLine{00406\ }
+\DoxyCodeLine{00407\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ Articulation\ Points:\ "{}}\ <<\ res.size()\ <<\ endl;}
+\DoxyCodeLine{00408\ \ \ \ \ \textcolor{keywordtype}{int}\ count=0;}
+\DoxyCodeLine{00409\ \ \ \ \ \textcolor{keywordflow}{for}(\ \textcolor{keyword}{auto}\ r:\ res)\{}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ v=undirectedGraph.\mbox{\hyperlink{class_graph_af7c6157baf3250a0780c7a9a34ffde7c}{getVertexSet}}().at(r);}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ cout\ <<\ count\ <<\ \textcolor{stringliteral}{"{}-\/"{}}\ <<\ v-\/>getInfo().getName()\ <<endl;}
+\DoxyCodeLine{00413\ \ \ \ \ \}}
+\DoxyCodeLine{00414\ }
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00416\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_ada51715932df5d8fe7659a2b78f79bb6}\label{class_manager_ada51715932df5d8fe7659a2b78f79bb6} 
+\index{Manager@{Manager}!getMaxTrip@{getMaxTrip}}
+\index{getMaxTrip@{getMaxTrip}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getMaxTrip()}{getMaxTrip()}}
+{\footnotesize\ttfamily void Manager\+::get\+Max\+Trip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the corresponding pair(s) with the maximum distance between airports. 
+
+\begin{DoxyNote}{Note}
+Complexity\+: O(V\texorpdfstring{$^\wedge$}{\string^}2 + VE), where V is the number of vertices (airports) and E is the number of edges (flights). 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{keywordtype}{int}\ max\_distance\ =\ 0;}
+\DoxyCodeLine{00295\ \ \ \ \ std::unordered\_set<std::string>\ max\_distance\_pair;}
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&airportPair\ :\ flights\_graph.getVertexSet())\ \{}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *startAirportVertex\ =\ airportPair.second;}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ bfs(startAirportVertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}());}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&otherAirportPair\ :flights\_graph.getVertexSet())\ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *otherAirportVertex\ =\ otherAirportPair.second;}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (otherAirportVertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}()\ !=\ startAirportVertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}())\ \{}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ distance\ =\ flights\_graph.\mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(otherAirportVertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}())-\/>\mbox{\hyperlink{class_vertex_a5c391478f6fc9302bea57ae4daa18c81}{getDistance}}();}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (distance\ >\ max\_distance)\ \{}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ max\_distance\ =\ distance;}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ max\_distance\_pair.clear();}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ max\_distance\_pair.insert(startAirportVertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}()\ +\ \textcolor{stringliteral}{"{}-\/"{}}\ +\ otherAirportVertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}());}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (distance\ ==\ max\_distance)\ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ max\_distance\_pair.insert(startAirportVertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}()\ +\ \textcolor{stringliteral}{"{}-\/"{}}\ +\ otherAirportVertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}());}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00317\ }
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \ \ \}}
+\DoxyCodeLine{00323\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Corresponding\ pair(s)\ with\ the\ maximum\ distance\ ("{}}\ <<\ max\_distance\ <<\ \textcolor{stringliteral}{"{}):"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00324\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&pair\ :\ max\_distance\_pair)\ \{}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ std::cout\ <<\ pair\ <<\ std::endl;}
+\DoxyCodeLine{00326\ \ \ \ \ \}}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00328\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_af446b8eeac284081f808638d8b43c3ed}\label{class_manager_af446b8eeac284081f808638d8b43c3ed} 
+\index{Manager@{Manager}!getNumAirlinesFromAirport@{getNumAirlinesFromAirport}}
+\index{getNumAirlinesFromAirport@{getNumAirlinesFromAirport}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getNumAirlinesFromAirport()}{getNumAirlinesFromAirport()}}
+{\footnotesize\ttfamily void Manager\+::get\+Num\+Airlines\+From\+Airport (\begin{DoxyParamCaption}\item[{const string \&}]{airport\+Code }\end{DoxyParamCaption})}
+
+
+
+Gets the number of different airlines leaving an airport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & The airport code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexity\+: O(E⋅logK), where E is the number of edges (flights) leaving the airport. 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}*\ airportVertex\ =\ flights\_graph.\mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(airportCode);}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{if}\ (airportVertex\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ set<std::string>\ uniqueAirlines;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_edge}{Edge}}\&\ edge\ :\ airportVertex-\/>getAdj())\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ uniqueAirlines.insert(edge.getWeight().getCode());}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ numAirlines\ =\ uniqueAirlines.size();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ different\ airlines\ out\ of\ airport\ "{}}\ <<\ airportCode\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ numAirlines\ <<\ std::endl;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Airport\ not\ find!"{}}\ <<\ airportCode\ <<\ std::endl;}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_a0f54ffd83aebf6ee3018a8c413dbf3ae}\label{class_manager_a0f54ffd83aebf6ee3018a8c413dbf3ae} 
+\index{Manager@{Manager}!getNumAvailableFlights@{getNumAvailableFlights}}
+\index{getNumAvailableFlights@{getNumAvailableFlights}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getNumAvailableFlights()}{getNumAvailableFlights()}}
+{\footnotesize\ttfamily void Manager\+::get\+Num\+Available\+Flights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the total number of available flights. 
+
+\begin{DoxyNote}{Note}
+Complexity\+: O(V+E), where V is the number of vertices (airports) and E is the number of edges (flights). 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ numAvailableFlights=0;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{auto}\ vertexSet\ =\ flights\_graph.\mbox{\hyperlink{class_graph_af7c6157baf3250a0780c7a9a34ffde7c}{getVertexSet}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ entry\ :\ vertexSet)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vertex}{Vertex}}*\ vertex\ =\ entry.second;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ numAvailableFlights\ +=\ vertex-\/>\mbox{\hyperlink{class_vertex_af1a7697464381c433adec7f9b964e807}{getAdj}}().size();}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ available\ flights:\ "{}}\ <<\ numAvailableFlights<<\ std::endl;}
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_ac2598b488c4ab60c7a95314ef7d8220a}\label{class_manager_ac2598b488c4ab60c7a95314ef7d8220a} 
+\index{Manager@{Manager}!getNumDestCountriesPerAirport@{getNumDestCountriesPerAirport}}
+\index{getNumDestCountriesPerAirport@{getNumDestCountriesPerAirport}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getNumDestCountriesPerAirport()}{getNumDestCountriesPerAirport()}}
+{\footnotesize\ttfamily void Manager\+::get\+Num\+Dest\+Countries\+Per\+Airport (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{airport\+Code }\end{DoxyParamCaption})}
+
+
+
+Gets the number of different countries flown to from an airport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & The airport code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexity\+: O(E⋅logK), where E is the number of edges (flights) leaving the airport. 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ std::set<std::string>\ countries;}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&edge\ :\ flights\_graph.getVertexSet().at(airportCode)-\/>getAdj())\{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ countries.insert(edge.getDest()-\/>getInfo().getCountry());}
+\DoxyCodeLine{00176\ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ different\ countries\ flown\ to\ from\ "{}}\ <<\ airportCode<<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ countries.size()\ <<\ std::endl;}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_ad57ccdc6cecc9d271801935ad0523244}\label{class_manager_ad57ccdc6cecc9d271801935ad0523244} 
+\index{Manager@{Manager}!getNumDestCountriesPerCity@{getNumDestCountriesPerCity}}
+\index{getNumDestCountriesPerCity@{getNumDestCountriesPerCity}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getNumDestCountriesPerCity()}{getNumDestCountriesPerCity()}}
+{\footnotesize\ttfamily void Manager\+::get\+Num\+Dest\+Countries\+Per\+City (\begin{DoxyParamCaption}\item[{const string \&}]{city\+Name,  }\item[{string \&}]{country }\end{DoxyParamCaption})}
+
+
+
+Retrieves the number of different countries flown to from a specific city. 
+
+This function iterates through the vertices of the flight graph, focusing on the specified city and country. It collects unique destination countries for flights departing from the given city.
+
+
+\begin{DoxyParams}{Parameters}
+{\em city\+Name} & The name of the city. \\
+\hline
+{\em country} & The name of the country to which the city belongs.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function considers both outgoing and incoming flights to and from the city.
+\end{DoxyNote}
+@timecomplexity O(V + E), where V is the number of vertices and E is the number of edges in the graph. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00157\ \ \ \ \ std::set<std::string>\ countries;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ vertexPair\ :flights\_graph.getVertexSet())\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vertex}{Vertex}}*\ vertex\ =\ vertexPair.second;}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (vertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_a7dc058132336ea1b211323730fc44148}{getCity}}()\ ==\ cityName\ \&\&\ vertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_a82e555b62c9af6c729a6d3c7fb8ae8c4}{getCountry}}()\ ==\ country)\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_edge}{Edge}}\&\ edge\ :\ vertex-\/>getAdj())\ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countries.insert(edge.getDest()-\/>getInfo().getCountry());}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00167\ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ different\ countries\ flown\ to\ from\ "{}}\ <<\ cityName\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ countries.size()\ <<\ std::endl;}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_af0da74e99d497e07d446027fde26c090}\label{class_manager_af0da74e99d497e07d446027fde26c090} 
+\index{Manager@{Manager}!getNumDestinations@{getNumDestinations}}
+\index{getNumDestinations@{getNumDestinations}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getNumDestinations()}{getNumDestinations()}}
+{\footnotesize\ttfamily void Manager\+::get\+Num\+Destinations (\begin{DoxyParamCaption}\item[{const string \&}]{airport\+Code }\end{DoxyParamCaption})}
+
+
+
+Gets the total number of destinations (airports, cities or countries) reachable from an airport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & The airport code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexity\+: O(V+\+E+(V+E)⋅logK), where V is the number of vertices (airports) and E is the number of edges (flights). 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}*\ startVertex\ =\ flights\_graph.\mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(airportCode);}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{int}\ airports\ =\ 0;}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{if}(startVertex\ ==\ \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Airport\ not\ found!"{}};}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00187\ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&pair\ :\ flights\_graph.getVertexSet())\{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ pair.second-\/>\mbox{\hyperlink{class_vertex_a3c6d6c2254850a647d3a27007ef940f6}{setVisited}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{00190\ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ set<string>\ countries;}
+\DoxyCodeLine{00192\ \ \ \ \ set<pair<string,\ string>>\ citiesAndCountries;}
+\DoxyCodeLine{00193\ \ \ \ \ queue<pair<Vertex*,int>>\ bfs;}
+\DoxyCodeLine{00194\ \ \ \ \ bfs.emplace(startVertex,\ 0);}
+\DoxyCodeLine{00195\ \ \ \ \ startVertex-\/>\mbox{\hyperlink{class_vertex_a3c6d6c2254850a647d3a27007ef940f6}{setVisited}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordflow}{while}\ (!bfs.empty())\{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}[curVertex,\ dist]\ =\ bfs.front();}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ bfs.pop();}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&k\ :\ curVertex-\/>getAdj())\{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *\ neighbor\ =\ k.getDest();}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!neighbor-\/>\mbox{\hyperlink{class_vertex_aa4bd82105b85ee53a917391f4811cd8a}{isVisited}}())\{}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ airports++;}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pair<string,\ string>\ cityAndCountry\ =\ make\_pair(neighbor-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_a7dc058132336ea1b211323730fc44148}{getCity}}(),\ neighbor-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_a82e555b62c9af6c729a6d3c7fb8ae8c4}{getCountry}}());}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ citiesAndCountries.insert(cityAndCountry);}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countries.insert(neighbor-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_a82e555b62c9af6c729a6d3c7fb8ae8c4}{getCountry}}());}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bfs.emplace(neighbor,\ dist\ +\ 1);}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ neighbor-\/>\mbox{\hyperlink{class_vertex_a3c6d6c2254850a647d3a27007ef940f6}{setVisited}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00212\ \ \ \ \ \}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}From\ "{}}\ <<\ airportCode\ <<\ \textcolor{stringliteral}{"{}\ airport\ "{}}\ <<\ \textcolor{stringliteral}{"{}there\ are:\ "{}}\ <<\ airports\ <<\ \textcolor{stringliteral}{"{}\ airports,\ "{}}\ <<\ citiesAndCountries.size()\ <<\ \textcolor{stringliteral}{"{}\ cities\ and\ "{}}\ <<\ countries.size()\ <<\ \textcolor{stringliteral}{"{}\ countries\ reachable.\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_a24dc70317039814b00cfa610713cd797}\label{class_manager_a24dc70317039814b00cfa610713cd797} 
+\index{Manager@{Manager}!getNumDestinationsPerAirline@{getNumDestinationsPerAirline}}
+\index{getNumDestinationsPerAirline@{getNumDestinationsPerAirline}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getNumDestinationsPerAirline()}{getNumDestinationsPerAirline()}}
+{\footnotesize\ttfamily void Manager\+::get\+Num\+Destinations\+Per\+Airline (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{airline\+Code }\end{DoxyParamCaption})}
+
+
+
+Gets the number of destinations for a specific airline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airline\+Code} & The airline code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexity\+: O(V⋅\+E⋅logK), where V is the number of vertices (airports) and E is the number of edges (flights). 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ std::set<std::string>\ uniqueDestinations;}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ vertexPair\ :\ flights\_graph.getVertexSet())\ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vertex}{Vertex}}*\ vertex\ =\ vertexPair.second;}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_edge}{Edge}}\&\ edge\ :\ vertex-\/>getAdj())\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (edge.getWeight().getCode()\ ==\ airlineCode)\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vertex}{Vertex}}*\ destVertex\ =\ edge.getDest();}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uniqueDestinations.insert(destVertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}());}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ numDestinations\ =\ uniqueDestinations.size();}
+\DoxyCodeLine{00152\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ destinations\ for\ airline\ "{}}\ <<\ airlineCode\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ numDestinations\ <<\ std::endl;}
+\DoxyCodeLine{00153\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_a86f81694b86c8fe0b6c5444aa584e7ad}\label{class_manager_a86f81694b86c8fe0b6c5444aa584e7ad} 
+\index{Manager@{Manager}!getNumFlightsFromAirport@{getNumFlightsFromAirport}}
+\index{getNumFlightsFromAirport@{getNumFlightsFromAirport}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getNumFlightsFromAirport()}{getNumFlightsFromAirport()}}
+{\footnotesize\ttfamily void Manager\+::get\+Num\+Flights\+From\+Airport (\begin{DoxyParamCaption}\item[{const string \&}]{airport\+Code }\end{DoxyParamCaption})}
+
+
+
+Gets the number of flights leaving an airport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & The airport code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexity\+: O(1) 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}*\ airportVertex\ =\ flights\_graph.\mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(airportCode);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordflow}{if}\ (airportVertex\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ numFlights\ =\ airportVertex-\/>\mbox{\hyperlink{class_vertex_af1a7697464381c433adec7f9b964e807}{getAdj}}().size();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ flights\ out\ of\ airport\ "{}}\ <<\ airportCode\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ numFlights\ <<\ std::endl;}
+\DoxyCodeLine{00083\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Airport\ not\ found!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_a35c0cecc633e38f6f7d12b81fca85b3c}\label{class_manager_a35c0cecc633e38f6f7d12b81fca85b3c} 
+\index{Manager@{Manager}!getNumFlightsPerAirline@{getNumFlightsPerAirline}}
+\index{getNumFlightsPerAirline@{getNumFlightsPerAirline}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getNumFlightsPerAirline()}{getNumFlightsPerAirline()}}
+{\footnotesize\ttfamily void Manager\+::get\+Num\+Flights\+Per\+Airline (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{airline\+Code }\end{DoxyParamCaption})}
+
+
+
+Gets the number of flights for a specific airline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airline\+Code} & The airline code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexity\+: O(V⋅E), where V is the number of vertices (airports) and E is the number of edges (flights). 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ numFlights=0;}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&vertex:flights\_graph.getVertexSet())\{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&edge:vertex.second-\/>getAdj())\{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(edge.getWeight().getCode()==airlineCode)\{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numFlights++;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ std::cout<<\ \textcolor{stringliteral}{"{}Number\ of\ flights\ from\ "{}}\ <<\ airlineCode\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ numFlights\ <<\ std::endl;}
+\DoxyCodeLine{00134\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_a14bd3a105e5f52fc4839429dc8a34de0}\label{class_manager_a14bd3a105e5f52fc4839429dc8a34de0} 
+\index{Manager@{Manager}!getNumFlightsPerCity@{getNumFlightsPerCity}}
+\index{getNumFlightsPerCity@{getNumFlightsPerCity}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getNumFlightsPerCity()}{getNumFlightsPerCity()}}
+{\footnotesize\ttfamily void Manager\+::get\+Num\+Flights\+Per\+City (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{city\+Name,  }\item[{string \&}]{country }\end{DoxyParamCaption})}
+
+
+
+Calculates the number of flights departing from a specific city in a given country. 
+
+This function iterates through the vertices of the flight graph and accumulates the total number of flights departing from the specified city in the given country.
+
+
+\begin{DoxyParams}{Parameters}
+{\em city\+Name} & The name of the city. \\
+\hline
+{\em country} & The name of the country to which the city belongs.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function considers both outgoing and incoming flights to and from the city.
+\end{DoxyNote}
+@timecomplexity O(V + E), where V is the number of vertices and E is the number of edges in the graph. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ numFlights=0;}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ vertexSet\ =\ flights\_graph.\mbox{\hyperlink{class_graph_af7c6157baf3250a0780c7a9a34ffde7c}{getVertexSet}}();}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ vertexPair\ :\ vertexSet)\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vertex}{Vertex}}*\ vertex\ =\ vertexPair.second;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (vertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_a7dc058132336ea1b211323730fc44148}{getCity}}()\ ==\ cityName\ \&\&\ vertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_a82e555b62c9af6c729a6d3c7fb8ae8c4}{getCountry}}()==country)\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ numFlights\ +=\ vertex-\/>\mbox{\hyperlink{class_vertex_af1a7697464381c433adec7f9b964e807}{getAdj}}().size();}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ numFlights\ +=\ flights\_graph.\mbox{\hyperlink{class_graph_a263f9ab7e7ba21a08bee90b2dea372ec}{inDegree}}(vertex-\/>\mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{getInfo}}().\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}());}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ std::cout<<\ \textcolor{stringliteral}{"{}Number\ of\ flights\ from\ "{}}\ <<\ cityName\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ numFlights\ <<\ std::endl;}
+\DoxyCodeLine{00121\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_manager_aae78c8a0b0da17366716ac88960cda02}\label{class_manager_aae78c8a0b0da17366716ac88960cda02} 
+\index{Manager@{Manager}!getTopKAirports@{getTopKAirports}}
+\index{getTopKAirports@{getTopKAirports}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{getTopKAirports()}{getTopKAirports()}}
+{\footnotesize\ttfamily void Manager\+::get\+Top\+KAirports (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption}) const}
+
+
+
+Gets the main airports based on arrivals and departures criteria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The number of major airports to display. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Complexity\+: O(\+V log(\+V)), where V is the number of vertices (airports) in the graph. 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00332\ \ \ \ \ vector<pair<Vertex\ *,\ int\ >>\ airports;}
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&\ vertex:\ flights\_graph.getVertexSet())\{}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ airports.emplace\_back(vertex.second,\ vertex.second-\/>getAdj().size()+\ vertex.second-\/>getArrives());}
+\DoxyCodeLine{00335\ \ \ \ \ \}}
+\DoxyCodeLine{00336\ \ \ \ \ sort(airports.begin(),\ airports.end(),\ [](\textcolor{keyword}{const}\ pair<Vertex\ *,\ int>\&\ a,\ \textcolor{keyword}{const}\ pair<Vertex\ *,\ int>\&\ b)\ \{}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ return\ a.second\ >\ b.second;}
+\DoxyCodeLine{00338\ \ \ \ \ \});}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00340\ \ \ \ \ cout<<\textcolor{stringliteral}{"{}The\ top-\/"{}}\ <<\ k<<\textcolor{stringliteral}{"{}\ airport\ are:\ "{}}<<\ endl;}
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ k\ \&\&\ i\ <\ airports.size();\ ++i)\ \{}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ cout\ <<\ airports[i].first-\/>getInfo().getName()\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ airports[i].second\ <<\ endl;}
+\DoxyCodeLine{00343\ \ \ \ \ \}}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_manager_8h}{Manager.\+h}}\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_manager_8cpp}{Manager.\+cpp}}\end{DoxyCompactItemize}

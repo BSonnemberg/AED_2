@@ -1,112 +1,90 @@
 #include "Graph.h"
 
-template <class T>
-Vertex<T>::Vertex(T in): info(in) {}
+Vertex::Vertex(Airport in): info(in) {}
 
-template <class T>
-Edge<T>::Edge(Vertex<T> *d, double d1): dest(d), distance(d1) {}
+Edge::Edge(Vertex *d, Airline airline){
+    this->dest = d;
+    this->weight = airline;
+}
 
-
-template <class T>
-int Graph<T>::getNumVertex() const {
+int Graph::getNumVertex() const {
     return vertexSet.size();
 }
 
-template <class T>
-vector<Vertex<T> * > Graph<T>::getVertexSet() const {
+unordered_map<string, Vertex *> Graph::getVertexSet() const {
     return vertexSet;
 }
 
-template<class T>
-T Vertex<T>::getInfo() const {
+Airport Vertex::getInfo() const {
     return info;
 }
 
-template<class T>
-void Vertex<T>::setInfo(T in) {
+void Vertex::setInfo(Airport in) {
     Vertex::info = in;
 }
 
 
-template<class T>
-Vertex<T> *Edge<T>::getDest() const {
+Vertex *Edge::getDest() const {
     return dest;
 }
 
-template<class T>
-void Edge<T>::setDest(Vertex<T> *d) {
+
+void Edge::setDest(Vertex *d) {
     Edge::dest = d;
 }
 
-template<class T>
-double Edge<T>::getDistance() const {
-    return distance;
+Airline Edge::getWeight() const {
+    return weight;
 }
 
-template<class T>
-void Edge<T>::setDistance(double weight) {
-    Edge::distance = distance;
+bool Vertex::operator==(Vertex v)  {
+    return this->info==v.info;
 }
 
-/*
- * Auxiliary function to find a vertex with a given content.
- */
-template <class T>
-Vertex<T> * Graph<T>::findVertex(const T &in) const {
-    for (auto v : vertexSet)
-        if (v->info == in)
-            return v;
-    return NULL;
+Vertex * Graph::findVertex( Airport &in) const {
+    auto f = vertexSet.find(in.getCode());
+    return (f != vertexSet.end()) ? f->second: nullptr;
 }
 
-template <class T>
-bool Vertex<T>::isVisited() const {
+bool Vertex::isVisited() const {
     return visited;
 }
 
-template <class T>
-void Vertex<T>::setVisited(bool v) {
+void Vertex::setVisited(bool v) {
     Vertex::visited = v;
 }
 
-template<class T>
-const vector<Edge<T>> &Vertex<T>::getAdj() const {
+vector<Edge> Vertex::getAdj() const {
     return adj;
 }
 
-template <class T>
-void Vertex<T>::setAdj(const vector<Edge<T>> &adj) {
+void Vertex::setAdj(const vector<Edge> &adj) {
     Vertex::adj = adj;
 }
 
-template <class T>
-bool Graph<T>::addVertex(const T &in) {
-    if (findVertex(in) == NULL) {
-        Vertex<T> * it = new Vertex<T> (in);
-        vertexSet.push_back(it);
-        return true;
+bool Graph::addVertex( Airport in) {
+    if (findVertex(in) != nullptr) {
+        return false;
     }
-    return false;
+    vertexSet.emplace(in.getCode(), new Vertex(in));
+    return true;
 }
 
-template <class T>
-bool Graph<T>::addEdge(const T &sourc, const T &dest, double w) {
+bool Graph::addEdge( Airport &sourc,  Airport &dest, Airline w) {
     if (findVertex(sourc) != NULL && findVertex(dest) != NULL) {
         findVertex(sourc)->addEdge(findVertex(dest),w);
+        findVertex(dest)->addArrives();
         return true;
     }
     return false;
 }
 
-template <class T>
-void Vertex<T>::addEdge(Vertex<T> *d, double w) {
-    this->adj.push_back(Edge<T>(d,w));
+void Vertex::addEdge(Vertex *d, Airline w) {
+    this->adj.push_back(Edge(d,w));
 }
 
-
-template <class T>
-bool Graph<T>::removeEdge(const T &sourc, const T &dest) {
-    vector<Edge<T>> aux= findVertex(sourc)->getAdj();
+bool Graph::removeEdge( Airport &sourc,  Airport &dest) {
+    vector<Edge> aux= findVertex(sourc)->getAdj();
     for(auto it:aux){
         if(it.getDest()== findVertex(dest)){
             findVertex(sourc)->removeEdgeTo(findVertex(dest));
@@ -116,9 +94,7 @@ bool Graph<T>::removeEdge(const T &sourc, const T &dest) {
     return false;
 }
 
-
-template <class T>
-bool Vertex<T>::removeEdgeTo(Vertex<T> *d) {
+bool Vertex::removeEdgeTo(Vertex *d) {
     auto it=this->adj.begin();
     while(it!=this->adj.end()){
         if(it->getDest()==d){
@@ -130,28 +106,74 @@ bool Vertex<T>::removeEdgeTo(Vertex<T> *d) {
     return false;
 }
 
-
-template <class T>
-bool Graph<T>::removeVertex(const T &in) {
-    auto it=vertexSet.begin();
-    Vertex<T> *foundVertex= nullptr;
-    while(it!=vertexSet.end()){
-        if((*it)->getInfo()==in){
-            foundVertex=*it;
+bool Graph::removeVertex( Airport in) {
+    for (auto it = vertexSet.begin(); it != vertexSet.end(); it++)
+        if ((*it).first == in.getCode()) {
+            Vertex *v = it->second;
             vertexSet.erase(it);
-            break;
+            for (auto n: vertexSet)
+                n.second->removeEdgeTo(v);
+            vertexSet.erase(in.getCode());
+            return true;
         }
-        else{
-            it++;
+    return false;
+}
+
+Graph::Graph(){};
+
+int Graph::inDegree(const std::string &airportCode) const {
+
+        int inDegree = 0;
+
+        for (const auto& entry : vertexSet) {
+            const Vertex* vertex = entry.second;
+
+            for (const Edge& edge : vertex->getAdj()) {
+                if (edge.getDest()->getInfo().getCode() == airportCode) {
+                    inDegree++;
+                }
+            }
         }
-    }
-    if(foundVertex==NULL){
-        return false;
-    }
-    for(auto it:vertexSet){
-        if(it==foundVertex){
-            it->removeEdgeTo(foundVertex);
-        }
-    }
-    return true;
+
+        return inDegree;
+}
+
+
+int Vertex::getArrives() {
+    return arrives;
+}
+
+void Vertex::addArrives() {
+    arrives++;
+}
+
+Vertex* Graph::findVertex(const std::string &airportCode) const {
+    auto  f  = vertexSet.find(airportCode);
+    return (f != vertexSet.end()) ? f->second : nullptr;
+}
+
+
+int Vertex::getNum() const {
+    return num;
+}
+
+void Vertex::setNum(int num) {
+    Vertex::num = num;
+}
+
+int Vertex::getLow() const {
+    return low;
+}
+
+void Vertex::setLow(int low) {
+    Vertex::low=low;
+}
+
+int Vertex::getDistance() const {
+    return distance;
+}
+
+
+void Vertex::setDistance(int d) {
+    distance = d;
 }

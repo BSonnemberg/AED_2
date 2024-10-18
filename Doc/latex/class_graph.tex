@@ -1,0 +1,319 @@
+\doxysection{Graph Class Reference}
+\hypertarget{class_graph}{}\label{class_graph}\index{Graph@{Graph}}
+
+
+Represents a graph.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_graph_a263f9ab7e7ba21a08bee90b2dea372ec}{in\+Degree}} (const std\+::string \&airport\+Code) const
+\begin{DoxyCompactList}\small\item\em Gets the entry degree of an airport in the graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_graph}{Graph} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{find\+Vertex}} (\mbox{\hyperlink{class_airport}{Airport}} \&in) const
+\begin{DoxyCompactList}\small\item\em Finds a vertex in the graph based on the airport code. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_graph_af9e8dcdb5d2113d3a9cf1369c1690981}{find\+Vertex}} (const string \&airport\+Code) const
+\begin{DoxyCompactList}\small\item\em Searches for and returns a pointer to a vertex with the given airport code. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_abb5e0517e2979c54eebdafc2a9875e8f}{get\+Num\+Vertex}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of vertices in the graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_ade709e765bd7999f6140757bb30a902d}{add\+Vertex}} (\mbox{\hyperlink{class_airport}{Airport}} in)
+\begin{DoxyCompactList}\small\item\em Adds a vertex to the graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_a4139cbac5e9eae37a9b6416918b3c883}{remove\+Vertex}} (\mbox{\hyperlink{class_airport}{Airport}} in)
+\begin{DoxyCompactList}\small\item\em Removes a vertex from the graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_a2dd2e9de8481f073d90720dd40bca78c}{add\+Edge}} (\mbox{\hyperlink{class_airport}{Airport}} \&sourc, \mbox{\hyperlink{class_airport}{Airport}} \&dest, \mbox{\hyperlink{class_airline}{Airline}} w)
+\begin{DoxyCompactList}\small\item\em Adds a directed edge to the graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_abb431180bbe7f16ea59747aa0e19f254}{remove\+Edge}} (\mbox{\hyperlink{class_airport}{Airport}} \&sourc, \mbox{\hyperlink{class_airport}{Airport}} \&dest)
+\begin{DoxyCompactList}\small\item\em Removes an edge from the graph. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_graph_af7c6157baf3250a0780c7a9a34ffde7c}{get\+Vertex\+Set}} () const
+\begin{DoxyCompactList}\small\item\em Gets the set of vertices of the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a graph. 
+
+@class\+Graph 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}\label{class_graph_ae4c72b8ac4d693c49800a4c7e273654f} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{class_graph}{Graph} class. 
+
+This default constructor is required for creating parameterless \doxylink{class_graph}{Graph} objects. @complexity O(1) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00122\ \{\};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_graph_a2dd2e9de8481f073d90720dd40bca78c}\label{class_graph_a2dd2e9de8481f073d90720dd40bca78c} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily bool Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_airport}{Airport}} \&}]{sourc,  }\item[{\mbox{\hyperlink{class_airport}{Airport}} \&}]{dest,  }\item[{\mbox{\hyperlink{class_airline}{Airline}}}]{w }\end{DoxyParamCaption})}
+
+
+
+Adds a directed edge to the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sourc} & \doxylink{class_airport}{Airport} of origin of the edge. \\
+\hline
+{\em dest} & \doxylink{class_edge}{Edge} destination airport. \\
+\hline
+{\em w} & \doxylink{class_airline}{Airline} associated with the edge. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the edge was added, false if the origin or destination airports do not exist. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(sourc)\ !=\ NULL\ \&\&\ \mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(dest)\ !=\ NULL)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(sourc)-\/>\mbox{\hyperlink{class_vertex_a0f36a867081d155797c1bb30c19dc526}{addEdge}}(\mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(dest),w);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(dest)-\/>\mbox{\hyperlink{class_vertex_a64819d314a3445db1e341b474fc4eff0}{addArrives}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00080\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_graph_ade709e765bd7999f6140757bb30a902d}\label{class_graph_ade709e765bd7999f6140757bb30a902d} 
+\index{Graph@{Graph}!addVertex@{addVertex}}
+\index{addVertex@{addVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addVertex()}{addVertex()}}
+{\footnotesize\ttfamily bool Graph\+::add\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_airport}{Airport}}}]{in }\end{DoxyParamCaption})}
+
+
+
+Adds a vertex to the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & \doxylink{class_airport}{Airport} associated with the new vertex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the vertex was added, false if the vertex already exists. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(in)\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ vertexSet.emplace(in.\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}(),\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_vertex}{Vertex}}(in));}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00071\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}\label{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef} 
+\index{Graph@{Graph}!findVertex@{findVertex}}
+\index{findVertex@{findVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{findVertex()}{findVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} Graph\+::find\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_airport}{Airport}} \&}]{in }\end{DoxyParamCaption}) const}
+
+
+
+Finds a vertex in the graph based on the airport code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & \doxylink{class_airport}{Airport} to be searched for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The vertex corresponding to the airport code, or nullptr if not found. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{auto}\ f\ =\ vertexSet.find(in.\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}());}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ (f\ !=\ vertexSet.end())\ ?\ f-\/>second:\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_graph_af9e8dcdb5d2113d3a9cf1369c1690981}\label{class_graph_af9e8dcdb5d2113d3a9cf1369c1690981} 
+\index{Graph@{Graph}!findVertex@{findVertex}}
+\index{findVertex@{findVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{findVertex()}{findVertex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} Graph\+::find\+Vertex (\begin{DoxyParamCaption}\item[{const string \&}]{airport\+Code }\end{DoxyParamCaption}) const}
+
+
+
+Searches for and returns a pointer to a vertex with the given airport code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & Code of the airport to be searched for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the vertex with the airport code, or nullptr if not found. @complexity O(1) 
+\end{DoxyReturn}
+\Hypertarget{class_graph_abb5e0517e2979c54eebdafc2a9875e8f}\label{class_graph_abb5e0517e2979c54eebdafc2a9875e8f} 
+\index{Graph@{Graph}!getNumVertex@{getNumVertex}}
+\index{getNumVertex@{getNumVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNumVertex()}{getNumVertex()}}
+{\footnotesize\ttfamily int Graph\+::get\+Num\+Vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of vertices in the graph. 
+
+\begin{DoxyReturn}{Returns}
+The number of vertices in the graph. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordflow}{return}\ vertexSet.size();}
+\DoxyCodeLine{00012\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_graph_af7c6157baf3250a0780c7a9a34ffde7c}\label{class_graph_af7c6157baf3250a0780c7a9a34ffde7c} 
+\index{Graph@{Graph}!getVertexSet@{getVertexSet}}
+\index{getVertexSet@{getVertexSet}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getVertexSet()}{getVertexSet()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*} $>$ Graph\+::get\+Vertex\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the set of vertices of the graph. 
+
+\begin{DoxyReturn}{Returns}
+A mapping of airport codes to vertices. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{return}\ vertexSet;}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_graph_a263f9ab7e7ba21a08bee90b2dea372ec}\label{class_graph_a263f9ab7e7ba21a08bee90b2dea372ec} 
+\index{Graph@{Graph}!inDegree@{inDegree}}
+\index{inDegree@{inDegree}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{inDegree()}{inDegree()}}
+{\footnotesize\ttfamily int Graph\+::in\+Degree (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{airport\+Code }\end{DoxyParamCaption}) const}
+
+
+
+Gets the entry degree of an airport in the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & \doxylink{class_airport}{Airport} code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The indegree of the airport in the graph. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graph_a263f9ab7e7ba21a08bee90b2dea372ec}{inDegree}}\ =\ 0;}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ entry\ :\ vertexSet)\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_vertex}{Vertex}}*\ vertex\ =\ entry.second;}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{class_edge}{Edge}}\&\ edge\ :\ vertex-\/>getAdj())\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (edge.getDest()-\/>getInfo().getCode()\ ==\ airportCode)\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_graph_a263f9ab7e7ba21a08bee90b2dea372ec}{inDegree}}++;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_graph_a263f9ab7e7ba21a08bee90b2dea372ec}{inDegree}};}
+\DoxyCodeLine{00139\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_graph_abb431180bbe7f16ea59747aa0e19f254}\label{class_graph_abb431180bbe7f16ea59747aa0e19f254} 
+\index{Graph@{Graph}!removeEdge@{removeEdge}}
+\index{removeEdge@{removeEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{removeEdge()}{removeEdge()}}
+{\footnotesize\ttfamily bool Graph\+::remove\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_airport}{Airport}} \&}]{sourc,  }\item[{\mbox{\hyperlink{class_airport}{Airport}} \&}]{dest }\end{DoxyParamCaption})}
+
+
+
+Removes an edge from the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sourc} & Origin airport of the edge to be removed. \\
+\hline
+{\em dest} & Destination airport of the edge to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the edge was removed, false if the edge does not exist. @complexity O(\+V), where V is the number of vertices in the graph. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ vector<Edge>\ aux=\ \mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(sourc)-\/>\mbox{\hyperlink{class_vertex_af1a7697464381c433adec7f9b964e807}{getAdj}}();}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ it:aux)\{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(it.getDest()==\ \mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(dest))\{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(sourc)-\/>\mbox{\hyperlink{class_vertex_a0fb9defc6bc64bd16e51bcf867c511cf}{removeEdgeTo}}(\mbox{\hyperlink{class_graph_a2ab250ab4f7555880ab1c17b6591d6ef}{findVertex}}(dest));}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_graph_a4139cbac5e9eae37a9b6416918b3c883}\label{class_graph_a4139cbac5e9eae37a9b6416918b3c883} 
+\index{Graph@{Graph}!removeVertex@{removeVertex}}
+\index{removeVertex@{removeVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{removeVertex()}{removeVertex()}}
+{\footnotesize\ttfamily bool Graph\+::remove\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_airport}{Airport}}}]{in }\end{DoxyParamCaption})}
+
+
+
+Removes a vertex from the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & \doxylink{class_airport}{Airport} associated with the vertex to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the vertex was removed, false if the vertex does not exist. @complexity O(\+V), where V is the number of vertices in the graph. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ vertexSet.begin();\ it\ !=\ vertexSet.end();\ it++)}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((*it).first\ ==\ in.\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}())\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ *v\ =\ it-\/>second;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ vertexSet.erase(it);}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ n:\ vertexSet)}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ n.second-\/>removeEdgeTo(v);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ vertexSet.erase(in.\mbox{\hyperlink{class_airport_add9b3ea6f8849f6167f5a70a9280781a}{getCode}}());}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00120\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_graph_8h}{Graph.\+h}}\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_graph_8cpp}{Graph.\+cpp}}\end{DoxyCompactItemize}

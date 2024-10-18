@@ -1,0 +1,169 @@
+\doxysection{Flight Class Reference}
+\hypertarget{class_flight}{}\label{class_flight}\index{Flight@{Flight}}
+
+
+Class that represents a flight between two airports by an airline.  
+
+
+
+
+{\ttfamily \#include $<$Flight.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_flight_acbf1e8c321e01e04db2fe651a08b30af}{Flight}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_flight}{Flight} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_flight_a4f84b84cedcb2aaab98b7326a41cca94}{Flight}} (string source, string target, string airline)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_flight}{Flight} class. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_flight_a2c0a618daa82891ba57343f7c4392ab3}{get\+Source}} ()
+\begin{DoxyCompactList}\small\item\em Gets the flight\textquotesingle{}s origin airport. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_flight_a5ac17d66253a23948ae73ceaf7041f9a}{get\+Target}} ()
+\begin{DoxyCompactList}\small\item\em Gets the flight destination airport. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_flight_aaab2ad6b95540f2dd6b4a7fa54cd85e5}{get\+Airline}} ()
+\begin{DoxyCompactList}\small\item\em Gets the airline for the flight. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_flight_ad82772815c363fe2d48e87d90b8fa49d}{operator$<$}} (const \mbox{\hyperlink{class_flight}{Flight}} \&other) const
+\begin{DoxyCompactList}\small\item\em Less comparison operator overhead than for the \doxylink{class_flight}{Flight} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that represents a flight between two airports by an airline. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_flight_acbf1e8c321e01e04db2fe651a08b30af}\label{class_flight_acbf1e8c321e01e04db2fe651a08b30af} 
+\index{Flight@{Flight}!Flight@{Flight}}
+\index{Flight@{Flight}!Flight@{Flight}}
+\doxysubsubsection{\texorpdfstring{Flight()}{Flight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Flight\+::\+Flight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{class_flight}{Flight} class. 
+
+This default constructor is required for creating parameterless \doxylink{class_flight}{Flight} objects. @complexity O(1) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \{\}}
+
+\end{DoxyCode}
+\Hypertarget{class_flight_a4f84b84cedcb2aaab98b7326a41cca94}\label{class_flight_a4f84b84cedcb2aaab98b7326a41cca94} 
+\index{Flight@{Flight}!Flight@{Flight}}
+\index{Flight@{Flight}!Flight@{Flight}}
+\doxysubsubsection{\texorpdfstring{Flight()}{Flight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Flight\+::\+Flight (\begin{DoxyParamCaption}\item[{string}]{source,  }\item[{string}]{target,  }\item[{string}]{airline }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_flight}{Flight} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & \doxylink{class_flight}{Flight} origin airport. \\
+\hline
+{\em target} & \doxylink{class_flight}{Flight} destination airport. \\
+\hline
+{\em airline} & \doxylink{class_flight}{Flight} airline.\\
+\hline
+\end{DoxyParams}
+This constructor initializes the class members with the given values. @complexity O(1) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00006\ \ \ \ \ this-\/>source\ =\ source;}
+\DoxyCodeLine{00007\ \ \ \ \ this-\/>airline=airline;}
+\DoxyCodeLine{00008\ \ \ \ \ this-\/>target\ =\ target;}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_flight_aaab2ad6b95540f2dd6b4a7fa54cd85e5}\label{class_flight_aaab2ad6b95540f2dd6b4a7fa54cd85e5} 
+\index{Flight@{Flight}!getAirline@{getAirline}}
+\index{getAirline@{getAirline}!Flight@{Flight}}
+\doxysubsubsection{\texorpdfstring{getAirline()}{getAirline()}}
+{\footnotesize\ttfamily string Flight\+::get\+Airline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the airline for the flight. 
+
+\begin{DoxyReturn}{Returns}
+The airline for the flight. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{return}\ airline;}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_flight_a2c0a618daa82891ba57343f7c4392ab3}\label{class_flight_a2c0a618daa82891ba57343f7c4392ab3} 
+\index{Flight@{Flight}!getSource@{getSource}}
+\index{getSource@{getSource}!Flight@{Flight}}
+\doxysubsubsection{\texorpdfstring{getSource()}{getSource()}}
+{\footnotesize\ttfamily string Flight\+::get\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the flight\textquotesingle{}s origin airport. 
+
+\begin{DoxyReturn}{Returns}
+The flight\textquotesingle{}s origin airport. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{return}\ source;}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_flight_a5ac17d66253a23948ae73ceaf7041f9a}\label{class_flight_a5ac17d66253a23948ae73ceaf7041f9a} 
+\index{Flight@{Flight}!getTarget@{getTarget}}
+\index{getTarget@{getTarget}!Flight@{Flight}}
+\doxysubsubsection{\texorpdfstring{getTarget()}{getTarget()}}
+{\footnotesize\ttfamily string Flight\+::get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the flight destination airport. 
+
+\begin{DoxyReturn}{Returns}
+The flight destination airport. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{return}\ target;}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_flight_ad82772815c363fe2d48e87d90b8fa49d}\label{class_flight_ad82772815c363fe2d48e87d90b8fa49d} 
+\index{Flight@{Flight}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Flight@{Flight}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Flight\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_flight}{Flight}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Less comparison operator overhead than for the \doxylink{class_flight}{Flight} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{class_flight}{Flight} object to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if this flight\textquotesingle{}s origin airport is smaller than the other flight\textquotesingle{}s origin airport, false otherwise. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{return}\ source\ <\ other.source;}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_flight_8h}{Flight.\+h}}\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_flight_8cpp}{Flight.\+cpp}}\end{DoxyCompactItemize}

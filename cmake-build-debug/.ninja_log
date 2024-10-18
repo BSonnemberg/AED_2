@@ -1,0 +1,23 @@
+# ninja log v5
+1819	2417	7258449751645845	projeto2_AED.exe	4ae2b35303a458f7
+0	463	1704150059310499530	CMakeFiles/projeto2_AED.dir/Airport.cpp.o	e8c1d1d4dd23e4e0
+1055	1087	1704150059941540124	projeto2_AED	7f08ccc3a474e1bb
+0	49	1704237898023834540	build.ninja	e4f5e09b497fdcef
+0	562	1704150059412329510	CMakeFiles/projeto2_AED.dir/Graph.cpp.o	ecfa447a97428cd0
+0	52	1704150058905944730	CMakeFiles/projeto2_AED.dir/main.cpp.o	537eb563f059b060
+52	415	1704150059266453944	CMakeFiles/projeto2_AED.dir/Flight.cpp.o	8389fbc42eef6e5e
+0	581	1704150059433352555	CMakeFiles/projeto2_AED.dir/Menu.cpp.o	e27ac3b337f572fa
+1	436	1704150059288131654	CMakeFiles/projeto2_AED.dir/Airline.cpp.o	cfd5a29f278eb10c
+417	1055	1704150059907245437	CMakeFiles/projeto2_AED.dir/Manager.cpp.o	404a3a79269b1d6e
+0	722	1704150059574234089	CMakeFiles/projeto2_AED.dir/Read.cpp.o	8258967110c75a28
+4	53	1704242975163144713	CMakeFiles/projeto2_AED.dir/main.cpp.o	2e1c9cfd9c3d5704
+54	409	1704242975519072118	CMakeFiles/projeto2_AED.dir/Flight.cpp.o	8f2684fae0455125
+5	457	1704242975566978482	CMakeFiles/projeto2_AED.dir/Airport.cpp.o	81506fef5a3110a7
+6	468	1704242975580912653	CMakeFiles/projeto2_AED.dir/Airline.cpp.o	130a3c5f27b0fbbe
+5	571	1704242975682529983	CMakeFiles/projeto2_AED.dir/Graph.cpp.o	d8ce6d5c766c7546
+5	607	1704242975719328685	CMakeFiles/projeto2_AED.dir/Menu.cpp.o	d33ca80ab2aecdeb
+6	678	1704242975790077582	CMakeFiles/projeto2_AED.dir/Read.cpp.o	3695a4611f0d1750
+409	1034	1704242976146687323	CMakeFiles/projeto2_AED.dir/Manager.cpp.o	f4ce79ca79f85420
+1034	1066	1704242976181028601	projeto2_AED	7f08ccc3a474e1bb
+9	814	1704452361420431557	CMakeFiles/projeto2_AED.dir/Manager.cpp.o	f4ce79ca79f85420
+814	929	1704452361537153856	projeto2_AED	7f08ccc3a474e1bb

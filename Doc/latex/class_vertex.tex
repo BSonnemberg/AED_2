@@ -1,0 +1,490 @@
+\doxysection{Vertex Class Reference}
+\hypertarget{class_vertex}{}\label{class_vertex}\index{Vertex@{Vertex}}
+
+
+Represents a vertex in the graph.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vertex_ae2f4457998996cf77127f3f5a2737c93}{Vertex}} (\mbox{\hyperlink{class_airport}{Airport}} in)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_vertex}{Vertex} class constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_airport}{Airport}} \mbox{\hyperlink{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}{get\+Info}} () const
+\begin{DoxyCompactList}\small\item\em Gets information about the airport associated with the vertex. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_vertex_ac08b2cb141d31f656462ef3b986a227e}{get\+Arrives}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of flights arriving at an airport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_a64819d314a3445db1e341b474fc4eff0}{add\+Arrives}} ()
+\begin{DoxyCompactList}\small\item\em Increases the number of flights arriving at the airport. @complexity O(1) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_ad98f347fdcf0ec1de304434f8f2de864}{set\+Info}} (\mbox{\hyperlink{class_airport}{Airport}} in)
+\begin{DoxyCompactList}\small\item\em Defines the airport information associated with the vertex. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_vertex_aa4bd82105b85ee53a917391f4811cd8a}{is\+Visited}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the vertex was visited during a graph traversal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_a3c6d6c2254850a647d3a27007ef940f6}{set\+Visited}} (bool v)
+\begin{DoxyCompactList}\small\item\em Defines the visited status for the vertex. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_vertex_a126e306f0534b99cd97aa864fdb243d4}{is\+Processing}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the vertex is processing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_a4427952db4781f61eb336fe5965da708}{set\+Processing}} (bool p)
+\begin{DoxyCompactList}\small\item\em Defines whether the vertex is processing. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $>$ \mbox{\hyperlink{class_vertex_af1a7697464381c433adec7f9b964e807}{get\+Adj}} () const
+\begin{DoxyCompactList}\small\item\em Gets the list of edges adjacent to the vertex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_ac17688dd9f2c7387d45d0eefbbb1a99b}{set\+Adj}} (const vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $>$ \&adj)
+\begin{DoxyCompactList}\small\item\em Defines the list of edges adjacent to the vertex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_a0f36a867081d155797c1bb30c19dc526}{add\+Edge}} (\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}dest, \mbox{\hyperlink{class_airline}{Airline}} w)
+\begin{DoxyCompactList}\small\item\em Adds an edge to the list of edges adjacent to the vertex. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_vertex_a5c391478f6fc9302bea57ae4daa18c81}{get\+Distance}} () const
+\begin{DoxyCompactList}\small\item\em Gets the distance associated with the vertex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_a020868955e2e501f13bd4f5b6d1d5a23}{set\+Distance}} (int d)
+\begin{DoxyCompactList}\small\item\em Defines the distance associated with the vertex. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_vertex_a0fb9defc6bc64bd16e51bcf867c511cf}{remove\+Edge\+To}} (\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}d)
+\begin{DoxyCompactList}\small\item\em Removes an edge from the list of edges adjacent to the vertex. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_vertex_a16d00e3e19e39566ab142f94289f63ce}{operator==}} (\mbox{\hyperlink{class_vertex}{Vertex}} v)
+\begin{DoxyCompactList}\small\item\em Equality comparison operator overload for \doxylink{class_vertex}{Vertex} class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_vertex_af65c843649e89097b38e8d108327c34a}{get\+Num}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number associated with the vertex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_aa691c9e7724f31dc397ba653eb061d34}{set\+Num}} (int num)
+\begin{DoxyCompactList}\small\item\em Defines the number associated with the vertex. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_vertex_a7acb7c0857c03cf23db677ad3618a04e}{get\+Low}} () const
+\begin{DoxyCompactList}\small\item\em Gets the low value associated with the vertex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vertex_a390911b126aee6bcf85a4b2e9921a421}{set\+Low}} (int low)
+\begin{DoxyCompactList}\small\item\em Defines the low value associated with the vertex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a vertex in the graph. 
+
+@class\+Vertex 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vertex_ae2f4457998996cf77127f3f5a2737c93}\label{class_vertex_ae2f4457998996cf77127f3f5a2737c93} 
+\index{Vertex@{Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{Vertex()}{Vertex()}}
+{\footnotesize\ttfamily Vertex\+::\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_airport}{Airport}}}]{in }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_vertex}{Vertex} class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & \doxylink{class_airport}{Airport} associated with the vertex.\\
+\hline
+\end{DoxyParams}
+Initializes a vertex with the given airport. @complexity O(1) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ :\ info(in)\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vertex_a64819d314a3445db1e341b474fc4eff0}\label{class_vertex_a64819d314a3445db1e341b474fc4eff0} 
+\index{Vertex@{Vertex}!addArrives@{addArrives}}
+\index{addArrives@{addArrives}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{addArrives()}{addArrives()}}
+{\footnotesize\ttfamily void Vertex\+::add\+Arrives (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Increases the number of flights arriving at the airport. @complexity O(1) 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ arrives++;}
+\DoxyCodeLine{00148\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_a0f36a867081d155797c1bb30c19dc526}\label{class_vertex_a0f36a867081d155797c1bb30c19dc526} 
+\index{Vertex@{Vertex}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Vertex\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}}]{dest,  }\item[{\mbox{\hyperlink{class_airline}{Airline}}}]{w }\end{DoxyParamCaption})}
+
+
+
+Adds an edge to the list of edges adjacent to the vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & \doxylink{class_edge}{Edge} destination vertex. \\
+\hline
+{\em w} & \doxylink{class_airline}{Airline} associated with the edge.\\
+\hline
+\end{DoxyParams}
+Adds an edge to the list of edges adjacent to the vertex. @complexity O(1) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ this-\/>adj.push\_back(\mbox{\hyperlink{class_edge}{Edge}}(d,w));}
+\DoxyCodeLine{00084\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_af1a7697464381c433adec7f9b964e807}\label{class_vertex_af1a7697464381c433adec7f9b964e807} 
+\index{Vertex@{Vertex}!getAdj@{getAdj}}
+\index{getAdj@{getAdj}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getAdj()}{getAdj()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $>$ Vertex\+::get\+Adj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the list of edges adjacent to the vertex. 
+
+\begin{DoxyReturn}{Returns}
+The list of edges adjacent to the vertex. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{return}\ adj;}
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_ac08b2cb141d31f656462ef3b986a227e}\label{class_vertex_ac08b2cb141d31f656462ef3b986a227e} 
+\index{Vertex@{Vertex}!getArrives@{getArrives}}
+\index{getArrives@{getArrives}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getArrives()}{getArrives()}}
+{\footnotesize\ttfamily int Vertex\+::get\+Arrives (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the number of flights arriving at an airport. 
+
+\begin{DoxyReturn}{Returns}
+The number of flights arriving at the airport. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{return}\ arrives;}
+\DoxyCodeLine{00144\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_a5c391478f6fc9302bea57ae4daa18c81}\label{class_vertex_a5c391478f6fc9302bea57ae4daa18c81} 
+\index{Vertex@{Vertex}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily int Vertex\+::get\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the distance associated with the vertex. 
+
+\begin{DoxyReturn}{Returns}
+The distance associated with the vertex. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{return}\ distance;}
+\DoxyCodeLine{00174\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b}\label{class_vertex_a067ae9a9e0b3116325e3ceaaf5bc594b} 
+\index{Vertex@{Vertex}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_airport}{Airport}} Vertex\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets information about the airport associated with the vertex. 
+
+\begin{DoxyReturn}{Returns}
+The airport information associated with the vertex. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{return}\ info;}
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_a7acb7c0857c03cf23db677ad3618a04e}\label{class_vertex_a7acb7c0857c03cf23db677ad3618a04e} 
+\index{Vertex@{Vertex}!getLow@{getLow}}
+\index{getLow@{getLow}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getLow()}{getLow()}}
+{\footnotesize\ttfamily int Vertex\+::get\+Low (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the low value associated with the vertex. 
+
+\begin{DoxyReturn}{Returns}
+The low value associated with the vertex. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordflow}{return}\ low;}
+\DoxyCodeLine{00166\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_af65c843649e89097b38e8d108327c34a}\label{class_vertex_af65c843649e89097b38e8d108327c34a} 
+\index{Vertex@{Vertex}!getNum@{getNum}}
+\index{getNum@{getNum}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getNum()}{getNum()}}
+{\footnotesize\ttfamily int Vertex\+::get\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the number associated with the vertex. 
+
+\begin{DoxyReturn}{Returns}
+The number associated with the vertex. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordflow}{return}\ num;}
+\DoxyCodeLine{00158\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_a126e306f0534b99cd97aa864fdb243d4}\label{class_vertex_a126e306f0534b99cd97aa864fdb243d4} 
+\index{Vertex@{Vertex}!isProcessing@{isProcessing}}
+\index{isProcessing@{isProcessing}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{isProcessing()}{isProcessing()}}
+{\footnotesize\ttfamily bool Vertex\+::is\+Processing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the vertex is processing. 
+
+\begin{DoxyReturn}{Returns}
+True if the vertex is processing, false otherwise. @complexity O(1) 
+\end{DoxyReturn}
+\Hypertarget{class_vertex_aa4bd82105b85ee53a917391f4811cd8a}\label{class_vertex_aa4bd82105b85ee53a917391f4811cd8a} 
+\index{Vertex@{Vertex}!isVisited@{isVisited}}
+\index{isVisited@{isVisited}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{isVisited()}{isVisited()}}
+{\footnotesize\ttfamily bool Vertex\+::is\+Visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks whether the vertex was visited during a graph traversal. 
+
+\begin{DoxyReturn}{Returns}
+true if the vertex was visited, false otherwise. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{return}\ visited;}
+\DoxyCodeLine{00051\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_a16d00e3e19e39566ab142f94289f63ce}\label{class_vertex_a16d00e3e19e39566ab142f94289f63ce} 
+\index{Vertex@{Vertex}!operator==@{operator==}}
+\index{operator==@{operator==}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Vertex\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{v }\end{DoxyParamCaption})}
+
+
+
+Equality comparison operator overload for \doxylink{class_vertex}{Vertex} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \doxylink{class_vertex}{Vertex} to be compared. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the vertices are equal, false otherwise. @complexity O(1) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>info==v.info;}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_a0fb9defc6bc64bd16e51bcf867c511cf}\label{class_vertex_a0fb9defc6bc64bd16e51bcf867c511cf} 
+\index{Vertex@{Vertex}!removeEdgeTo@{removeEdgeTo}}
+\index{removeEdgeTo@{removeEdgeTo}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{removeEdgeTo()}{removeEdgeTo()}}
+{\footnotesize\ttfamily bool Vertex\+::remove\+Edge\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} \texorpdfstring{$\ast$}{*}}]{d }\end{DoxyParamCaption})}
+
+
+
+Removes an edge from the list of edges adjacent to the vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & Destination vertex of the edge to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the edge was removed, false if the edge does not exist. @complexity O(n), where n is the number of edges in the graph. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{auto}\ it=this-\/>adj.begin();}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordflow}{while}(it!=this-\/>adj.end())\{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(it-\/>getDest()==d)\{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>adj.erase(it);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ it++;}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00107\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_ac17688dd9f2c7387d45d0eefbbb1a99b}\label{class_vertex_ac17688dd9f2c7387d45d0eefbbb1a99b} 
+\index{Vertex@{Vertex}!setAdj@{setAdj}}
+\index{setAdj@{setAdj}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setAdj()}{setAdj()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Adj (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $>$ \&}]{adj }\end{DoxyParamCaption})}
+
+
+
+Defines the list of edges adjacent to the vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adj} & New list of adjacent edges. @complexity O(1) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ Vertex::adj\ =\ adj;}
+\DoxyCodeLine{00063\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_a020868955e2e501f13bd4f5b6d1d5a23}\label{class_vertex_a020868955e2e501f13bd4f5b6d1d5a23} 
+\index{Vertex@{Vertex}!setDistance@{setDistance}}
+\index{setDistance@{setDistance}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setDistance()}{setDistance()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Distance (\begin{DoxyParamCaption}\item[{int}]{d }\end{DoxyParamCaption})}
+
+
+
+Defines the distance associated with the vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & The new distance associated with the vertex. @complexity O(1) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00178\ \ \ \ \ distance\ =\ d;}
+\DoxyCodeLine{00179\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_ad98f347fdcf0ec1de304434f8f2de864}\label{class_vertex_ad98f347fdcf0ec1de304434f8f2de864} 
+\index{Vertex@{Vertex}!setInfo@{setInfo}}
+\index{setInfo@{setInfo}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setInfo()}{setInfo()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_airport}{Airport}}}]{in }\end{DoxyParamCaption})}
+
+
+
+Defines the airport information associated with the vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & New airport information. @complexity O(1) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ Vertex::info\ =\ in;}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_a390911b126aee6bcf85a4b2e9921a421}\label{class_vertex_a390911b126aee6bcf85a4b2e9921a421} 
+\index{Vertex@{Vertex}!setLow@{setLow}}
+\index{setLow@{setLow}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setLow()}{setLow()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Low (\begin{DoxyParamCaption}\item[{int}]{low }\end{DoxyParamCaption})}
+
+
+
+Defines the low value associated with the vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em low} & The new low value associated with the vertex. @complexity O(1) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ Vertex::low=low;}
+\DoxyCodeLine{00170\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_aa691c9e7724f31dc397ba653eb061d34}\label{class_vertex_aa691c9e7724f31dc397ba653eb061d34} 
+\index{Vertex@{Vertex}!setNum@{setNum}}
+\index{setNum@{setNum}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setNum()}{setNum()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Num (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Defines the number associated with the vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & The new number associated with the vertex. @complexity O(1) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00161\ \ \ \ \ Vertex::num\ =\ num;}
+\DoxyCodeLine{00162\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_vertex_a4427952db4781f61eb336fe5965da708}\label{class_vertex_a4427952db4781f61eb336fe5965da708} 
+\index{Vertex@{Vertex}!setProcessing@{setProcessing}}
+\index{setProcessing@{setProcessing}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setProcessing()}{setProcessing()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Processing (\begin{DoxyParamCaption}\item[{bool}]{p }\end{DoxyParamCaption})}
+
+
+
+Defines whether the vertex is processing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & New value indicating whether the vertex is in processing. @complexity O(1) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_vertex_a3c6d6c2254850a647d3a27007ef940f6}\label{class_vertex_a3c6d6c2254850a647d3a27007ef940f6} 
+\index{Vertex@{Vertex}!setVisited@{setVisited}}
+\index{setVisited@{setVisited}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setVisited()}{setVisited()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Visited (\begin{DoxyParamCaption}\item[{bool}]{v }\end{DoxyParamCaption})}
+
+
+
+Defines the visited status for the vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & New visited status. @complexity O(1) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ Vertex::visited\ =\ v;}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_graph_8h}{Graph.\+h}}\item 
+Projeto2-\/\+AED/\mbox{\hyperlink{_graph_8cpp}{Graph.\+cpp}}\end{DoxyCompactItemize}

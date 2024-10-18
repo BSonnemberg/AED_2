@@ -1,0 +1,50 @@
+\doxysection{Manager.\+h}
+\hypertarget{_manager_8h_source}{}\label{_manager_8h_source}\index{Projeto2-\/AED/Manager.h@{Projeto2-\/AED/Manager.h}}
+\mbox{\hyperlink{_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ PROJETO2\_AED\_MANAGER\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ PROJETO2\_AED\_MANAGER\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_graph_8h}{Graph.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_manager}{Manager}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_manager}{Manager}}(\mbox{\hyperlink{class_graph}{Graph}}\&\ graph);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_ad32b7c199c2f090dcad17c60957929ca}{getGlobalNumAirports}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_a725cf2764c5f8ba032a2bf435055c86f}{getGlobalNumCities}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_a0f54ffd83aebf6ee3018a8c413dbf3ae}{getNumAvailableFlights}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_a212742aa7ff6ca6a4110436e07720c48}{getGlobalNumCountries}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_ac446bf4f5f39362127fabe2c86d1829b}{getGlobalNumAirlines}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_a86f81694b86c8fe0b6c5444aa584e7ad}{getNumFlightsFromAirport}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ airportCode);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_af446b8eeac284081f808638d8b43c3ed}{getNumAirlinesFromAirport}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ airportCode);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_a14bd3a105e5f52fc4839429dc8a34de0}{getNumFlightsPerCity}}(\textcolor{keyword}{const}\ std::string\&\ cityName,\ \textcolor{keywordtype}{string}\&\ country);}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_a35c0cecc633e38f6f7d12b81fca85b3c}{getNumFlightsPerAirline}}(\textcolor{keyword}{const}\ std::string\&\ airlineCode);}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_ad57ccdc6cecc9d271801935ad0523244}{getNumDestCountriesPerCity}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&cityName,\ \textcolor{keywordtype}{string}\ \&country);}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_ac2598b488c4ab60c7a95314ef7d8220a}{getNumDestCountriesPerAirport}}(\textcolor{keyword}{const}\ std::string\&\ airportCode);}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_aae78c8a0b0da17366716ac88960cda02}{getTopKAirports}}(\textcolor{keywordtype}{int}\ k)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_a30642c9054e37a989c49dd663c7d3747}{getCountReachableDestinations}}(\textcolor{keyword}{const}\ std::string\ \&airportCode,\ \textcolor{keywordtype}{int}\ maxStops)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_af0da74e99d497e07d446027fde26c090}{getNumDestinations}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&airportCode);}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_a4c01536e89eeb5749191171f225f2f9c}{getIdentifyEssentialAirports}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_ada51715932df5d8fe7659a2b78f79bb6}{getMaxTrip}}();}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_a24dc70317039814b00cfa610713cd797}{getNumDestinationsPerAirline}}(\textcolor{keyword}{const}\ std::string\&\ airlineCode);}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_manager_ac49e1e637bd2384d3095d99c8a1c5720}{findBestFlightOption}}(\textcolor{keyword}{const}\ std::string\ \&source,\ \textcolor{keyword}{const}\ std::string\ \&destination,\ \textcolor{keyword}{const}\ std::vector<std::string>\&\ preferredAirlines);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\&\ flights\_graph;\ }
+\DoxyCodeLine{00147\ \ \ \ \ set<string>\ visited;\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ bfs(\textcolor{keyword}{const}\ std::string\ \&startAirportCode);}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ dfs\_art(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_graph}{Graph}}\&\ graph,\ \mbox{\hyperlink{class_vertex}{Vertex}}*\ vertex,\ stack<string>\&\ s,\ unordered\_set<string>\&\ res,\ \textcolor{keywordtype}{int}\&\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{double}\ calculateDistance(\textcolor{keywordtype}{double}\ lat1,\ \textcolor{keywordtype}{double}\ lon1,\ \textcolor{keywordtype}{double}\ lat2,\ \textcolor{keywordtype}{double}\ lon2);}
+\DoxyCodeLine{00185\ \ \ \ \ std::vector<Vertex*>\ findClosestAirports(\textcolor{keywordtype}{double}\ latitude,\ \textcolor{keywordtype}{double}\ longitude);}
+\DoxyCodeLine{00192\ \ \ \ \ vector<Vertex*>\ \ findVertexByInput(\textcolor{keyword}{const}\ std::string\ \&input);}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \};}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJETO2\_AED\_MANAGER\_H}}
+
+\end{DoxyCode}
